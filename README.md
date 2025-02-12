@@ -5,7 +5,7 @@
 
 For more details, check out the product pages at:
 * [UNIT Electronics Website](https://uelectronics.com/)
-* [Hardware-UNIT NANO C6](https://github.com/UNIT-Electronics/UNIT_NANO_ESP32_C6/tree/main/HARDWARE)
+* [Hardware-UNIT NANO C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/tree/main/HARDWARE)
 * [Product Reference Manual](https://github.com/UNIT-Electronics/UNIT-NANO-C6/blob/main/UNIT-NANO-C6(Product%20Reference%20Manual%20)%5BEN%5D.pdf)
 * [UNIT NANO C6 Getting Started Guide](https://unit-electronics.github.io/UNIT-NANO-C6/index.html)
 
