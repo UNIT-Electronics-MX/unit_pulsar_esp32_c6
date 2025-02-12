@@ -1,8 +1,8 @@
 
-# Hadware [UNIT NANO ESP32-C6](https://github.com/UNIT-Electronics/DualMCU-ONE) 
+# Hadware [UNIT NANO ESP32-C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6) 
 
 
-<a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/blob/main/HARDWARE/Schematics_UNIT%20NANO_C6_V1_6.pdf"><img src="Resources/Schematics_icon.jpg?raw=false" width="500px"><br/> Schematics</a>
+<a href="https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/blob/main/HARDWARE/Schematics_UNIT%20NANO_C6_V1_6.pdf"><img src="Resources/Schematics_icon.jpg?raw=false" width="500px"><br/> Schematics</a>
 
 # Power Tree
 
