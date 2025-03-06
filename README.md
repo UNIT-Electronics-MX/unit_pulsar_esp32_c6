@@ -1,11 +1,11 @@
 # UNIT NANO C6 ESP32-C6 Development Board
 
-<a href="https://uelectronics.com"><img src="HARDWARE/Resources/TOP(1V6).png" width="200px"><br/>
+<a href="https://uelectronics.com"><img src="hardware/Resources/TOP(1V6).png" width="200px"><br/>
 *Click here to purchase one from the UNIT Electronics shop*</a>
 
 For more details, check out the product pages at:
 * [UNIT Electronics Website](https://uelectronics.com/)
-* [Hardware-UNIT NANO C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/tree/main/HARDWARE)
+* [Hardware-UNIT NANO C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/tree/main/hardware)
 * [Product Reference Manual](https://github.com/UNIT-Electronics/UNIT-NANO-C6/blob/main/UNIT-NANO-C6(Product%20Reference%20Manual%20)%5BEN%5D.pdf)
 * [UNIT NANO C6 Getting Started Guide](https://unit-electronics.github.io/UNIT-NANO-C6/index.html)
 
@@ -75,10 +75,10 @@ For setup and first projects, refer to the [Getting Started Guide](https://unit-
 ## Pinout and Schematic
 
 ### Pinout Diagram
-![UNIT NANO C6 Pinout](HARDWARE/Resources/Pinout.png)
+![UNIT NANO C6 Pinout](hardware/resources/Pinout.png)
 
 ### Schematic
-For detailed circuit design, refer to the [Hardware Documentation](https://github.com/UNIT-Electronics/UNIT-NANO-C6/tree/main/HARDWARE) and the full schematic available in the repository.
+For detailed circuit design, refer to the [Hardware Documentation](https://github.com/UNIT-Electronics/UNIT-NANO-C6/tree/main/hardware) and the full schematic available in the repository.
 
 ---
 
