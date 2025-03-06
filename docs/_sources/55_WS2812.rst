@@ -1,0 +1,40 @@
+WS2812 Control 
+=================
+Harness the power of WS1280 LED strips with the DualMCU ONE board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
+
+This section describes how to control WS2812 LED strips using the DualMCU ONE board.
+The DualMCU ONE board has a GPIO pin embebbed connected to the single WS2812 LED.
+
+.. list-table:: Pin Mapping for WS2812
+   :widths: 10 10
+   :header-rows: 1
+   :align: center
+
+   * - PIN
+     - GPIO ESP32C6
+   * - DIN
+     - 8
+
+.. _figura-dualmcu-one:
+
+.. figure:: /_static/WS1280_LED.jpg
+   :align: center
+   :alt: rgb led
+   :width: 40%
+
+   WS2812 LED Strip
+
+Code Example
+------------
+Below is an example that demonstrates how to control WS1280 LED strips using the DualMCU ONE board:: 
+    
+    from machine import Pin
+    from neopixel import NeoPixel
+    np = NeoPixel(Pin(8), 1)
+    np[0] = (255, 128, 0) # set to red, full brightness
+
+    np.write()
+
+..  tip::
+    for more information on the NeoPixel library, refer to the `NeoPixel Library Documentation <https://github.com/lvidarte/esp8266/wiki/MicroPython:-NeoPixels>`_.
+
