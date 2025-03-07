@@ -1,7 +1,7 @@
 I2C (Inter-Integrated Circuit)
 ===============================
 
-Discover the I2C communication protocol and learn how to communicate with I2C devices using the DualMCU ONE board. This section will cover I2C bus setup and communication with I2C peripherals.
+Discover the I2C communication protocol and learn how to communicate with I2C devices using the NANO C6 board. This section will cover I2C bus setup and communication with I2C peripherals.
 
 .. .. _figure_i2c:
 
@@ -15,26 +15,23 @@ Discover the I2C communication protocol and learn how to communicate with I2C de
 I2C Overview
 ------------
 
-I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The DualMCU ONE development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.
+I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The NANO C6 development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.
 
 Pinout Details
 --------------
-Below is the pinout table for the I2C connections on the DualMCU ONE, detailing the corresponding GPIO connections for both the ESP32 and RP2040 microcontrollers.
+Below is the pinout table for the I2C connections on the NANO C6, detailing the pin assignments for SDA and SCL.
 
-.. list-table:: I2C Pinout
-   :widths: 20 20 20
-   :header-rows: 1
-   :align: center
+.. list-table:: ESP32-C6 Pinout
+  :widths: 20 20
+  :header-rows: 1
+  :align: center
 
-   * - PIN
-     - GPIO ESP32
-     - GPIO RP2040
-   * - SCLK
-     - 22
-     - 5 / 21 / 23
-   * - SDA
-     - 21
-     - 4 / 20 / 22
+  * - Pin
+    - Function
+  * - A4 (SDA)/D18
+    - GPIO22 / SDIO_DATA2
+  * - A5 (SCL)/D19
+    - GPIO23 / SDIO_DATA3
 
 Scanning for I2C Devices
 ------------------------
@@ -48,7 +45,7 @@ To scan for I2C devices connected to the bus, you can use the following code sni
 
          import machine
 
-         i2c = machine.SoftI2C(0, scl=machine.Pin(5), sda=machine.Pin(4))
+         i2c = machine.I2C(0, scl=machine.Pin(23), sda=machine.Pin(22))
          devices = i2c.scan()
 
          for device in devices:
@@ -62,8 +59,8 @@ To scan for I2C devices connected to the bus, you can use the following code sni
 
         void setup() {
           // in setup
-          Wire.setSDA(4);
-          Wire.setSCL(5);
+          Wire.setSDA(22);
+          Wire.setSCL(23);
           Wire.begin();
           Serial.begin(9600); // Start serial communication at 9600 baud rate
           while (!Serial); // Wait for serial port to connect

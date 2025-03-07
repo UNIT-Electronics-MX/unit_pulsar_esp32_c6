@@ -1,5 +1,5 @@
-UNIT NANO C6 
-============
+ESP32-C6 Development Board NANOC6
+==================================
 
 Introduction
 ------------

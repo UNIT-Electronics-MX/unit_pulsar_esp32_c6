@@ -169,7 +169,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_about.html">UNIT NANO C6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">ESP32-C6 Development Board NANOC6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
@@ -179,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="report.html">How generate report of errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
 
     </div>
@@ -415,35 +415,31 @@ document.write(`
                   
   <section id="i2c-inter-integrated-circuit">
 <h1>I2C (Inter-Integrated Circuit)<a class="headerlink" href="#i2c-inter-integrated-circuit" title="Link to this heading">#</a></h1>
-<p>Discover the I2C communication protocol and learn how to communicate with I2C devices using the DualMCU ONE board. This section will cover I2C bus setup and communication with I2C peripherals.</p>
+<p>Discover the I2C communication protocol and learn how to communicate with I2C devices using the NANO C6 board. This section will cover I2C bus setup and communication with I2C peripherals.</p>
 <section id="i2c-overview">
 <h2>I2C Overview<a class="headerlink" href="#i2c-overview" title="Link to this heading">#</a></h2>
-<p>I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The DualMCU ONE development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.</p>
+<p>I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The NANO C6 development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.</p>
 </section>
 <section id="pinout-details">
 <h2>Pinout Details<a class="headerlink" href="#pinout-details" title="Link to this heading">#</a></h2>
-<p>Below is the pinout table for the I2C connections on the DualMCU ONE, detailing the corresponding GPIO connections for both the ESP32 and RP2040 microcontrollers.</p>
+<p>Below is the pinout table for the I2C connections on the NANO C6, detailing the pin assignments for SDA and SCL.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">I2C Pinout</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">ESP32-C6 Pinout</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
-<col style="width: 33.3%" />
-<col style="width: 33.3%" />
-<col style="width: 33.3%" />
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>PIN</p></th>
-<th class="head"><p>GPIO ESP32</p></th>
-<th class="head"><p>GPIO RP2040</p></th>
+<tr class="row-odd"><th class="head"><p>Pin</p></th>
+<th class="head"><p>Function</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>SCLK</p></td>
-<td><p>22</p></td>
-<td><p>5 / 21 / 23</p></td>
+<tr class="row-even"><td><p>A4 (SDA)/D18</p></td>
+<td><p>GPIO22 / SDIO_DATA2</p></td>
 </tr>
-<tr class="row-odd"><td><p>SDA</p></td>
-<td><p>21</p></td>
-<td><p>4 / 20 / 22</p></td>
+<tr class="row-odd"><td><p>A5 (SCL)/D19</p></td>
+<td><p>GPIO23 / SDIO_DATA3</p></td>
 </tr>
 </tbody>
 </table>
@@ -455,7 +451,7 @@ document.write(`
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">I2C</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">23</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">22</span><span class="p">))</span>
 <span class="n">devices</span> <span class="o">=</span> <span class="n">i2c</span><span class="o">.</span><span class="n">scan</span><span class="p">()</span>
 
 <span class="k">for</span> <span class="n">device</span> <span class="ow">in</span> <span class="n">devices</span><span class="p">:</span>
@@ -466,8 +462,8 @@ document.write(`
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// in setup</span>
-<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSDA</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSCL</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSDA</span><span class="p">(</span><span class="mi">22</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSCL</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
 <span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"> </span><span class="c1">// Start serial communication at 9600 baud rate</span>
 <span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">);</span><span class="w"> </span><span class="c1">// Wait for serial port to connect</span>

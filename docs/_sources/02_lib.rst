@@ -7,10 +7,9 @@ the `pip <https://pip.pypa.io/en/stable/>`_ package manager.
 
 
 Installation Guide Using MIP Library
-----------------------------------------------
-
+-------------------------------------
 .. note::
-    Direct support for mip on RP2040 is not available. The `mip` library is utilized to install other libraries on the NANOC6 board.
+    The `mip` library is utilized to install other libraries on the NANOC6 board.
 
 Requirements
 ~~~~~~~~~~~~
@@ -177,4 +176,4 @@ Libraries available
 
 
 The library is actively maintained and updated to provide the best experience for developers working with 
-the DualMCU ONE board. For more information and updates, visit the `dualmcu GitHub repository``
+the DualMCU ONE board. 

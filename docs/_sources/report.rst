@@ -1,17 +1,30 @@
-How generate report of errors
+How to Generate an Error Report
 ===============================
-This is a guide to generate report of errors.
 
-Unit Electronics is a company that produces electronic devices. The company has a quality control 
-department that is responsible for checking the quality of the devices designed.
+This guide explains how to generate an error report using GitHub repositories.
 
-you can get the report of errors by following the steps below:
+Steps to Create an Error Report
+-------------------------------
 
-1. Got to the Unit Electronics github repository.
-2. Click on the issues tab.
-3. Click on the new issue button.
-4. Fill in the title and description of the issue.
-5. Click on the submit button.
+1. **Access the GitHub Repository**  
+    Navigate to the `GitHub repository <https://github.com/UNIT-Electronics/UNIT_NANO_C6>`_ where the project is hosted.
 
+2. **Open the Issues Tab**  
+    Click on the "Issues" tab located in the repository menu.
 
-The quality control department will review the issue and take the necessary action to resolve it.
+3. **Create a New Issue**  
+    - Click the "New Issue" button.
+    - Provide a clear and concise title for the issue.
+    - Add a detailed description, including relevant information such as:
+    
+      - Steps to reproduce the error.
+      - Expected and actual results.
+      - Any related logs, screenshots, or files.
+
+4. **Submit the Issue**  
+    Once the form is complete, click the "Submit" button.
+
+Review and Follow-Up
+--------------------
+
+The development team or maintainers will review the issue and take appropriate action to address it.
