@@ -78,7 +78,7 @@ For setup and first projects, refer to the [Getting Started Guide](https://unit-
 ![UNIT NANO C6 Pinout](hardware/resources/Nano-C6-Pinout_EN.jpg)
 
 ### Schematic
-For detailed circuit design, refer to the [Hardware Documentation](https://github.com/UNIT-Electronics/UNIT-NANO-C6/tree/main/hardware) and the full schematic available in the repository.
+For detailed circuit design, refer to the [Hardware Documentation](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/tree/main/hardware) and the full schematic available in the repository.
 
 ---
 
