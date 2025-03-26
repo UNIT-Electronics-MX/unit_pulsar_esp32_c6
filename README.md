@@ -89,7 +89,7 @@ For detailed circuit design, refer to the [Hardware Documentation](https://githu
 | **Arduino Package ESP32-C6 JSON**         | [ESP32-C6 Package](https://github.com/UNIT-Electronics/Uelectronics-ESP32-Arduino-Package) |
 | **MicroPython Documentation**             | [MicroPython.org](https://micropython.org/)                                            |
 | **UNIT NANO C6 Documentation**            | [UNIT NANO C6 Documentation](https://github.com/UNIT-Electronics/UNIT-NANO-C6)        |
-| **Getting Started with UNIT NANO C6**     | [UNIT NANO C6 Guide](https://unit-electronics.github.io/UNIT-NANO-C6/index.html)      |
+| **Getting Started with UNIT NANO C6**     | [UNIT NANO C6 Guide](https://unit-electronics-mx.github.io/unit_nano_esp32_c6/)      |
 | **Thonny IDE**                            | [Thonny.org](https://thonny.org/)                                                     |
 | **Arduino IDE**                           | [Arduino IDE](https://www.arduino.cc/en/software)                                     |
 | **Visual Studio Code**                    | [Visual Studio Code](https://code.visualstudio.com/download)                          |
