@@ -14,9 +14,9 @@
 
 # Pinout
 
-<img src="resources/Pinout_Top_EN.jpg?raw=false" width="1000px"><br/>
+<img src="resources/Nano-C6-Pinout_EN.jpg?raw=false" width="1000px"><br/>
 
-<img src="resources/Pinout_Btm_EN.jpg?raw=false" width="1000px"><br/>
+
 
 # Board Topology
 

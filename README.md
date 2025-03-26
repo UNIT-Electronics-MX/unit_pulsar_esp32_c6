@@ -68,7 +68,7 @@ The **UNIT NANO C6** supports:
 - **Arduino IDE** with ESP32-C6 board package.
 - **MicroPython** and with compatible IDEs like Thonny.
 
-For setup and first projects, refer to the [Getting Started Guide](https://unit-electronics.github.io/UNIT-NANO-C6/index.html).
+For setup and first projects, refer to the [Getting Started Guide](https://unit-electronics-mx.github.io/unit_nano_esp32_c6/).
 
 ---
 
