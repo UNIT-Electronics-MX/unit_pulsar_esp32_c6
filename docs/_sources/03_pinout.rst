@@ -1,6 +1,7 @@
 Development board 
 =======================
 
+
 Squematic Diagram
 -----------------
 
@@ -15,6 +16,29 @@ Squematic Diagram
 
 Pinout  distribution
 --------------------
+
+.. raw:: html
+
+    <div style="text-align: center;">
+
+
+        <br><br>
+
+        <!-- Imagen que se puede abrir en una nueva ventana al hacer clic -->
+        <a href="./_static/nanoc6/Nano-C6-Pinout_EN.jpg" target="_blank">
+            <img 
+                src="./_static/nanoc6/Nano-C6-Pinout_EN.jpg" 
+                alt="UNIT NANO C6 Pinout" 
+                style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
+            >
+        </a>
+
+        <br><br>
+
+    </div>
+
+
+
 
 The following table provides the pinout details for the UNIT Nano C6 and ESP32 C6 boards.
 

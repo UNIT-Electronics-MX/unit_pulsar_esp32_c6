@@ -58,8 +58,9 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Analog to Digital Conversion" href="22_adc.html" />
     <link rel="prev" title="Development board" href="03_pinout.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <link rel="icon" href="_static/3.png" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
+
   </head>
   
   
@@ -169,9 +170,10 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_about.html">ESP32-C6 Development Board NANOC6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">Development Board NANOC6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">General Purpose Input/Output (GPIO) Pins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
@@ -413,7 +415,7 @@ document.write(`
 <figure class="align-center" id="id1">
 <span id="figura2-dualmcu-one"></span><a class="reference internal image-reference" href="_images/top.png"><img alt="_images/top.png" src="_images/top.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">UNIT NANO C6 Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">UNIT NANO C6 Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the UNIT NANO C6 development board using both MicroPython and C++.</p>
@@ -424,10 +426,10 @@ document.write(`
 <h3>LED Blinking Example<a class="headerlink" href="#led-blinking-example" title="Link to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The following example demonstrates how to blink an LED connected to GPIO pin 15 on the UNIT NANO C6 development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.</p>
+<p>The following example demonstrates how to blink an LED connected to GPIO pin 6 on the UNIT NANO C6 development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.</p>
 </div>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
 <span class="n">led</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
@@ -456,6 +458,31 @@ document.write(`
 <span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">              </span><span class="c1">// Wait for 1 second</span>
 <span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Turn the LED off (LOW is the voltage level)</span>
 <span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">              </span><span class="c1">// Wait for 1 second</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;freertos/FreeRTOS.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;freertos/task.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/gpio.h&quot;</span>
+
+<span class="cp">#define BLINK_GPIO GPIO_NUM_6  </span><span class="c1">// Puedes cambiarlo según tu hardware</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">app_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="c1">// Configura el GPIO como salida</span>
+<span class="w">    </span><span class="n">gpio_reset_pin</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">);</span>
+<span class="w">    </span><span class="n">gpio_set_direction</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_MODE_OUTPUT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Enciende el LED</span>
+<span class="w">        </span><span class="n">gpio_set_level</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span><span class="w"> </span><span class="c1">// 500 ms</span>
+
+<span class="w">        </span><span class="c1">// Apaga el LED</span>
+<span class="w">        </span><span class="n">gpio_set_level</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span><span class="w"> </span><span class="c1">// 500 ms</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>

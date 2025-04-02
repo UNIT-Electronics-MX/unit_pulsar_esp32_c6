@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installing packages &#8212; UNIT NANO C6 0.0.1 documentation</title>
+    <title>Installing packages - Micropython &#8212; UNIT NANO C6 0.0.1 documentation</title>
   
   
   
@@ -55,10 +55,11 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '02_lib';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Development board" href="03_pinout.html" />
+    <link rel="next" title="ESP-IDF Getting Started" href="02_1_esp-idf.html" />
     <link rel="prev" title="Desktop Environment" href="01_setup.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <link rel="icon" href="_static/3.png" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
+
   </head>
   
   
@@ -168,9 +169,10 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_about.html">ESP32-C6 Development Board NANOC6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">Development Board NANOC6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing packages</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
@@ -381,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing packages</h1>
+    <h1>Installing packages - Micropython</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,15 +399,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-electronics-library-development">Unit Electronics Library Development</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Libraries available</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
             </nav>
         </div>
@@ -417,8 +415,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="installing-packages">
-<h1>Installing packages<a class="headerlink" href="#installing-packages" title="Link to this heading">#</a></h1>
+  <section id="installing-packages-micropython">
+<h1>Installing packages - Micropython<a class="headerlink" href="#installing-packages-micropython" title="Link to this heading">#</a></h1>
 <p>This section will guide you through the installation process of the required libraries using
 the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> package manager.</p>
 <section id="installation-guide-using-mip-library">
@@ -473,60 +471,32 @@ the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> 
 </div>
 </section>
 </section>
-<section id="unit-electronics-library-development">
-<h2>Unit Electronics Library Development<a class="headerlink" href="#unit-electronics-library-development" title="Link to this heading">#</a></h2>
-<p>Use method below to install different libraries developed by Unit Electronics.</p>
-<p>Open a terminal and run the following command to install the library using pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>&lt;name-library&gt;
-</pre></div>
-</div>
-<p>For example, to install the library <a class="reference external" href="https://pypi.org/project/chatos/">chatos</a>, run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>chatos
-</pre></div>
-</div>
-<p>If the installation was successful, open a terminal and run the following command to verify the installation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>chatos
-</pre></div>
-</div>
-<figure class="align-center" id="id2">
-<span id="figure-chatos"></span><a class="reference internal image-reference" href="_images/chatos.png"><img alt="Chatos" src="_images/chatos.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Chatos Library Successfully Installed</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<section id="libraries-available">
-<h3>Libraries available<a class="headerlink" href="#libraries-available" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><a class="reference external" href="https://pypi.org/project/chatos/">Chatos</a> : The library provides a set of tools to help developers work with the Chatos board. Stablish a communication between the computer and the microcontroller CH552 using the serial port to 9600 baud rate.</p></li>
-<li><p><a class="reference external" href="https://pypi.org/project/loadupch/">Loadupch</a> : The library is a tool by load the firmware to the CH552 microcontroller.</p></li>
-</ul>
-</section>
 <section id="dualmcu-library">
-<h3>DualMCU Library<a class="headerlink" href="#dualmcu-library" title="Link to this heading">#</a></h3>
+<h2>DualMCU Library<a class="headerlink" href="#dualmcu-library" title="Link to this heading">#</a></h2>
 <p>Firstly, you need install Thonny IDE. You can download it from the <a class="reference external" href="https://thonny.org/">Thonny website</a>.</p>
 <ol class="arabic simple">
 <li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
 <li><p>Navigate to <strong>Tools</strong> -&gt; <strong>Manage Packages</strong>.</p></li>
 <li><p>Search for <code class="docutils literal notranslate"><span class="pre">dualmcu</span></code> and click <strong>Install</strong>.</p></li>
 </ol>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="id1">
 <span id="figure-dualmcu-libary"></span><a class="reference internal image-reference" href="_images/dualmcu_library.png"><img alt="DualMCU Library" src="_images/dualmcu_library.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">DualMCU Library</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">DualMCU Library</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="4">
 <li><p>Successfully installed the library.</p></li>
 </ol>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id2">
 <span id="figure-dualmcu-libary-success"></span><a class="reference internal image-reference" href="_images/dualmcu_library_success.png"><img alt="DualMCU Library" src="_images/dualmcu_library_success.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">DualMCU Library Successfully Installed</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">DualMCU Library Successfully Installed</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Alternatively, download the library from <a class="reference external" href="https://pypi.org/project/dualmcu/">dualmcu.py</a>.</p>
 <section id="usage">
-<h4>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h4>
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
 <p>The library provides a set of tools to help developers work with the DualMCU ONE board. The following are the main features of the library:</p>
 <ul class="simple">
 <li><p><strong>I2C Support</strong>: The library provides support for I2C communication protocol, making it easy to interface with a wide range of sensors and devices.</p></li>
@@ -553,8 +523,9 @@ the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> 
 </pre></div>
 </div>
 </section>
-<section id="id1">
-<h4>Libraries available<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+</section>
+<section id="libraries-available">
+<h2>Libraries available<a class="headerlink" href="#libraries-available" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://pypi.org/project/dualmcu/">Dualmcu</a> : The library provides a set of tools to help developers work with the DualMCU ONE board. The library is actively maintained and updated to provide the best experience for developers working with the DualMCU ONE board. For more information and updates, visit the <cite>dualmcu GitHub repository`</cite></p></li>
 <li><p><a class="reference external" href="https://pypi.org/project/ocks/">Ocks</a> : The library provides support for I2C communication protocol.</p></li>
@@ -562,8 +533,6 @@ the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> 
 </ul>
 <p>The library is actively maintained and updated to provide the best experience for developers working with
 the DualMCU ONE board.</p>
-</section>
-</section>
 </section>
 </section>
 
@@ -588,11 +557,11 @@ the DualMCU ONE board.</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_pinout.html"
+       href="02_1_esp-idf.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Development board</p>
+        <p class="prev-next-title">ESP-IDF Getting Started</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -618,15 +587,11 @@ the DualMCU ONE board.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-electronics-library-development">Unit Electronics Library Development</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Libraries available</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
   </nav></div>
 

@@ -228,3 +228,31 @@ To install Visual Studio Code, follow the instructions below:
         :align: center
 
         Visual Studio Code extensions
+
+
+Arduino IDE Installation
+------------------------
+
+The Arduino IDE is a popular open-source platform for building and programming microcontroller-based projects. It provides a user-friendly interface and a wide range of libraries to simplify the development process.
+
+To install the Arduino IDE, follow the instructions for your operating system in the 
+
+.. raw:: html
+
+    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/Compatibility_Arduino_upython/Arduino/" target="_blank">Unit Electronics Package Installation Guide</a>.
+
+
+Thonny IDE Installation
+------------------------
+
+Thonny is a Python IDE that is designed for beginners. It provides a simple interface and built-in support for MicroPython, making it an excellent choice for programming the NANO C6 board.
+
+Follow the instructions for your operating system in the 
+
+.. raw:: html
+
+    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/Compatibility_Arduino_upython/upython/" target="_blank">Micropython Compatibility Guide</a>.
+    <br> </br>
+
+
+

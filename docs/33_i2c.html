@@ -58,8 +58,9 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="SPI (Serial Peripheral Interface)" href="44_spi.html" />
     <link rel="prev" title="Analog to Digital Conversion" href="22_adc.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <link rel="icon" href="_static/3.png" type="image/x-icon">
+    <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
+
   </head>
   
   
@@ -169,9 +170,10 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_about.html">ESP32-C6 Development Board NANOC6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">Development Board NANOC6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
@@ -396,10 +398,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pinout-details">Pinout Details</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-for-i2c-devices">Scanning for I2C Devices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssd1306-display">SSD1306 Display</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#SoftI2C"><code class="docutils literal notranslate"><span class="pre">SoftI2C</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a></li>
 </ul>
 </li>
 </ul>
@@ -515,7 +514,7 @@ document.write(`
 <figure class="align-center" id="id2">
 <span id="figura-ssd1306-display"></span><a class="reference internal image-reference" href="_images/oled.jpg"><img alt="ssd1306 display" src="_images/oled.jpg" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">SSD1306 Display</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">SSD1306 Display</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The display 128x64 pixel monochrome OLED display equipped with an SSD1306 controller is connected using a JST 1.25mm 4-pin connector. The following table provides the pinout details for the display connection.</p>
@@ -549,7 +548,7 @@ document.write(`
 <section id="library-support">
 <h3>Library Support<a class="headerlink" href="#library-support" title="Link to this heading">#</a></h3>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>The <cite>ocks.py</cite> library for MicroPython on ESP32 &amp; RP2040 is compatible with the SSD1306 display controller.</p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>The <cite>ocks.py</cite> library for MicroPython on ESP32 &amp; RP2040 is compatible with the SSD1306 display controller.</p>
 <p><strong>Installation</strong></p>
 <ol class="arabic simple">
 <li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
@@ -558,11 +557,9 @@ document.write(`
 </ol>
 <p>Alternatively, download the library from <a class="reference external" href="https://pypi.org/project/ocks/">ocks.py</a>.</p>
 <p><strong>Microcontroller Configuration</strong></p>
-<dl class="py class">
-<dt class="sig sig-object py" id="SoftI2C">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SoftI2C</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sda</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">400000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SoftI2C" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">scl</span><span class="p">,</span> <span class="n">sda</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>Change the following line depending on your microcontroller:</p>
 <p><strong>For ESP32</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">21</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">22</span><span class="p">))</span>
@@ -572,7 +569,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 </div>
-<p><cite>**Example Code**</cite></p>
+<p><strong>Example Code</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">from</span> <span class="nn">ocks</span> <span class="kn">import</span> <span class="n">SSD1306_I2C</span>
 
@@ -594,10 +591,7 @@ document.write(`
 <span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This code initializes the display, fills the screen with different colors, and displays text.</p>
-<p><code class="docutils literal notranslate"><span class="pre">sda=machine.Pin(*)</span></code> and <code class="docutils literal notranslate"><span class="pre">scl=machine.Pin(*)</span></code> should be replaced with the appropriate GPIO pins for your setup.</p>
-<p>This version clarifies the structure, pin configurations, library usage, installation instructions, and example code for your project. Adjust the placeholders marked with
-<cite>*</cite> in your actual code based on your specific GPIO pin assignments.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">sda=machine.Pin(*)</span></code> and <code class="docutils literal notranslate"><span class="pre">scl=machine.Pin(*)</span></code> with the appropriate GPIO pins for your setup.</p>
 </div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><p>The <cite>Adafruit_SSD1306</cite> library for Arduino is compatible with the SSD1306 display controller.</p>
 <p><strong>Installation</strong></p>
 <ol class="arabic simple">
@@ -605,12 +599,6 @@ document.write(`
 <li><p>Navigate to <strong>Tools</strong> -&gt; <strong>Manage Libraries</strong>.</p></li>
 <li><p>Search for <code class="docutils literal notranslate"><span class="pre">Adafruit_SSD1306</span></code> and click <strong>Install</strong>.</p></li>
 </ol>
-<p><strong>Description code</strong></p>
-<p>The provided Arduino sketch is designed to interface an RP2040 microcontroller with an SSD1306 OLED
-display using the I2C communication protocol. It begins by including the necessary libraries for
-controlling the display and initializing serial communication for debugging purposes. The sketch
-defines constants for the display dimensions and I2C pins (SDA on GPIO 4 and SCL on GPIO 5) and
-initializes an Adafruit SSD1306 object.</p>
 <p><strong>Example Code</strong></p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Adafruit_GFX.h&gt;</span>
@@ -675,6 +663,56 @@ initializes an Adafruit SSD1306 object.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ssd1306.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/i2c.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_log.h&quot;</span>
+
+<span class="cp">#define I2C_MASTER_NUM I2C_NUM_0</span>
+<span class="cp">#define I2C_MASTER_SDA_IO 6</span>
+<span class="cp">#define I2C_MASTER_SCL_IO 7</span>
+<span class="cp">#define I2C_MASTER_FREQ_HZ 100000</span>
+
+<span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">TAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MAIN&quot;</span><span class="p">;</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">scan_i2c_bus</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Scanning I2C bus...&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">addr</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">127</span><span class="p">;</span><span class="w"> </span><span class="n">addr</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">i2c_cmd_handle_t</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2c_cmd_link_create</span><span class="p">();</span>
+<span class="w">      </span><span class="n">i2c_master_start</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">      </span><span class="n">i2c_master_write_byte</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">addr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">I2C_MASTER_WRITE</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+<span class="w">      </span><span class="n">i2c_master_stop</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">      </span><span class="n">esp_err_t</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i2c_master_cmd_begin</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="n">cmd</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">portTICK_PERIOD_MS</span><span class="p">);</span>
+<span class="w">      </span><span class="n">i2c_cmd_link_delete</span><span class="p">(</span><span class="n">cmd</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ret</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ESP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Found device at 0x%02X&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="n">ESP_LOGI</span><span class="p">(</span><span class="n">TAG</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Scan complete.&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">app_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="n">i2c_config_t</span><span class="w"> </span><span class="n">conf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C_MODE_MASTER</span><span class="p">,</span>
+<span class="w">      </span><span class="p">.</span><span class="n">sda_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C_MASTER_SDA_IO</span><span class="p">,</span>
+<span class="w">      </span><span class="p">.</span><span class="n">scl_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C_MASTER_SCL_IO</span><span class="p">,</span>
+<span class="w">      </span><span class="p">.</span><span class="n">sda_pullup_en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_PULLUP_ENABLE</span><span class="p">,</span>
+<span class="w">      </span><span class="p">.</span><span class="n">scl_pullup_en</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GPIO_PULLUP_ENABLE</span><span class="p">,</span>
+<span class="w">      </span><span class="p">.</span><span class="n">master</span><span class="p">.</span><span class="n">clk_speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2C_MASTER_FREQ_HZ</span><span class="p">,</span>
+<span class="w">   </span><span class="p">};</span>
+
+<span class="w">   </span><span class="n">i2c_param_config</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">conf</span><span class="p">);</span>
+<span class="w">   </span><span class="n">i2c_driver_install</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="n">conf</span><span class="p">.</span><span class="n">mode</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+
+<span class="w">   </span><span class="n">scan_i2c_bus</span><span class="p">();</span><span class="w"> </span><span class="c1">// Optional</span>
+
+<span class="w">   </span><span class="n">ssd1306_init</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">);</span>
+<span class="w">   </span><span class="n">ssd1306_clear</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">);</span>
+<span class="w">   </span><span class="n">ssd1306_draw_text</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ESP32-C6 &quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">ssd1306_draw_text</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;I2C Scan + OLED&quot;</span><span class="p">);</span>
+<span class="w">   </span><span class="n">ssd1306_draw_text</span><span class="p">(</span><span class="n">I2C_MASTER_NUM</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Monosaurio&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div></div>
 </section>
 </section>
@@ -729,10 +767,7 @@ initializes an Adafruit SSD1306 object.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pinout-details">Pinout Details</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-for-i2c-devices">Scanning for I2C Devices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssd1306-display">SSD1306 Display</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#SoftI2C"><code class="docutils literal notranslate"><span class="pre">SoftI2C</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a></li>
 </ul>
 </li>
 </ul>
