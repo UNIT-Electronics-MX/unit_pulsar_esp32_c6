@@ -1,5 +1,5 @@
-Installing packages 
-===================
+Installing packages - Micropython
+=================================
 
 This section will guide you through the installation process of the required libraries using 
 the `pip <https://pip.pypa.io/en/stable/>`_ package manager.
@@ -61,49 +61,8 @@ Copy and run the code below in Thonny to connect your ESP32 to a Wi-Fi network:
 
 
 
-Unit Electronics Library Development
-------------------------------------
-
-Use method below to install different libraries developed by Unit Electronics.
-
-Open a terminal and run the following command to install the library using pip:
-
-.. code-block:: bash
-
-   pip install <name-library>
-
-For example, to install the library `chatos <https://pypi.org/project/chatos/>`__, run the following command:    
-
-.. code-block:: bash
-
-   pip install chatos
-
-
-
-If the installation was successful, open a terminal and run the following command to verify the installation:
-
-.. code-block:: bash
-
-   python -m chatos
-
-.. _figure_chatos:
-
-.. figure:: /_static/chatos.png
-   :align: center
-   :alt: Chatos
-   :width: 60%
-   
-   Chatos Library Successfully Installed
-
-Libraries available
-~~~~~~~~~~~~~~~~~~~~
-
-- `Chatos <https://pypi.org/project/chatos/>`__ : The library provides a set of tools to help developers work with the Chatos board. Stablish a communication between the computer and the microcontroller CH552 using the serial port to 9600 baud rate.
-
-- `Loadupch <https://pypi.org/project/loadupch/>`__ : The library is a tool by load the firmware to the CH552 microcontroller.
-
 DualMCU Library
-~~~~~~~~~~~~~~~~
+-----------------
 
 Firstly, you need install Thonny IDE. You can download it from the `Thonny website <https://thonny.org/>`__.
 
@@ -133,7 +92,7 @@ Alternatively, download the library from `dualmcu.py <https://pypi.org/project/d
 
 
 Usage
-^^^^^
+~~~~~
 
 The library provides a set of tools to help developers work with the DualMCU ONE board. The following are the main features of the library:
 
@@ -167,7 +126,7 @@ Examples of the library usage:
 
 
 Libraries available
-^^^^^^^^^^^^^^^^^^^^
+-------------------
 
 - `Dualmcu <https://pypi.org/project/dualmcu/>`__ : The library provides a set of tools to help developers work with the DualMCU ONE board. The library is actively maintained and updated to provide the best experience for developers working with the DualMCU ONE board. For more information and updates, visit the `dualmcu GitHub repository``
 - `Ocks <https://pypi.org/project/ocks/>`__ : The library provides support for I2C communication protocol.

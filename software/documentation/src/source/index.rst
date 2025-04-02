@@ -40,6 +40,7 @@ Documentation for the UNIT NANO ESP32C6 Development Board. This board is a versa
    00_about
    01_setup
    02_lib
+   02_1_esp-idf
    03_pinout
    11_gpio
    22_adc

@@ -1,4 +1,4 @@
-ESP32-C6 Development Board NANOC6
+Development Board NANOC6
 ==================================
 
 Introduction

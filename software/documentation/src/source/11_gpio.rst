@@ -23,7 +23,7 @@ LED Blinking Example
 
 .. tip::
 
-   The following example demonstrates how to blink an LED connected to GPIO pin 15 on the UNIT NANO C6 development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
+   The following example demonstrates how to blink an LED connected to GPIO pin 6 on the UNIT NANO C6 development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
 
 .. tabs::
 
@@ -64,3 +64,32 @@ LED Blinking Example
                 digitalWrite(LED, LOW);   // Turn the LED off (LOW is the voltage level)
                 delay(1000);              // Wait for 1 second
             }
+
+    .. tab:: esp-idf
+
+        .. code-block:: c
+           
+            #include <stdio.h>
+            #include "freertos/FreeRTOS.h"
+            #include "freertos/task.h"
+            #include "driver/gpio.h"
+
+            #define BLINK_GPIO GPIO_NUM_6  // Puedes cambiarlo según tu hardware
+
+            void app_main(void)
+            {
+                // Configura el GPIO como salida
+                gpio_reset_pin(BLINK_GPIO);
+                gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+
+                while (1) {
+                    // Enciende el LED
+                    gpio_set_level(BLINK_GPIO, 1);
+                    vTaskDelay(pdMS_TO_TICKS(500)); // 500 ms
+
+                    // Apaga el LED
+                    gpio_set_level(BLINK_GPIO, 0);
+                    vTaskDelay(pdMS_TO_TICKS(500)); // 500 ms
+                }
+            }
+
