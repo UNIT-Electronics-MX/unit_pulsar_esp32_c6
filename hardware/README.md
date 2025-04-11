@@ -20,7 +20,7 @@
 
 # Board Topology
 
-**Front View**<img src="resources/topology.png?raw=false" width="800px"><br/>
+<img src="resources/topology.png?raw=false" width="800px"><br/>
 
 | Ref.  | Description                                                                 |
 |-------|-----------------------------------------------------------------------------|
