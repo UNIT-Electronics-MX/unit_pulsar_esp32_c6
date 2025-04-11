@@ -20,11 +20,25 @@
 
 # Board Topology
 
-**Front View**<img src="resources/TOP TOPOLOGY.png?raw=false" width="800px"><br/>
+**Front View**<img src="resources/topology.png?raw=false" width="800px"><br/>
 
-
-
-**Back View**<img src="resources/BOTTOM TOPOLOGY.png?raw=false" width="800px"><br/>
+| Ref.  | Description                                                                 |
+|-------|-----------------------------------------------------------------------------|
+| U1    | Espressif ESP32-C6FH4                                                      |
+| U2    | AP2112K 3.3V LDO Voltage Regulator                                          |
+| U3    | MCP73831 Battery Charge Management IC                                      |
+| A1    | SMD Antenna                                                                |
+| L1    | Power On LED                                                               |
+| L2    | Built-in LED (GPIO 6 or D13)                                               |
+| L3    | Charge On LED                                                              |
+| L4    | WS2812B-2020 LED                                                           |
+| J1    | Male USB Type-C Connector                                                  |
+| J2    | Low-Power I2C-QWIIC JST Connector                                          |
+| PB1   | ESP32 Flash Button                                                         |
+| PB2   | ESP32 Reset Button                                                         |
+| JP1   | Micro SD Card Socket                                                       |
+| JP2   | 2.0 mm or 1.25 mm Pitch Battery Connector                                   |
+| JP3   | JP3-1, JP3-2: Female Castelled Headers 2.54 mm, compatible with Arduino Nano Pinout |
 
 
 
