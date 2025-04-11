@@ -1,5 +1,5 @@
 
-# Hadware [UNIT NANO ESP32-C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6) 
+# Hadware [PULSARUNIT NANO ESP32-C6](https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6) 
 
 
 <a href="https://github.com/UNIT-Electronics-MX/UNIT_NANO_ESP32_C6/blob/main/hardware/Schematics_UNIT%20NANO_C6_V1_6.pdf"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/> Schematics</a>
@@ -14,7 +14,7 @@
 
 # Pinout
 
-<img src="resources/Nano-C6-Pinout_EN.jpg?raw=false" width="1000px"><br/>
+<img src="resources/Pulsar-C6-Pinout_EN.jpg?raw=false" width="1000px"><br/>
 
 
 
