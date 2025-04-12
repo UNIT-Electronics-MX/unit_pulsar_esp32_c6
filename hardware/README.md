@@ -10,7 +10,7 @@
 
 # Block Diagram
 
-<img src="resources/Block Diagram.png?raw=false" width="800px"><br/>
+<img src="resources/BlockDiagram.png?raw=false" width="800px"><br/>
 
 # Pinout
 
