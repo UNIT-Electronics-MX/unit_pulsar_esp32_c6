@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
 
-UNIT NANO ESP32C6 Development Board
-=====================================
+**PULSAR NANO ESP32 C6** Development Board
+==========================================
 
 .. note::
 	You are  reading the most recent version available. 
