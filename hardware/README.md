@@ -1,5 +1,5 @@
 
-# Hadware [PULSAR NANO ESP32-C6](https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/) 
+# Hadware [PULSAR ESP32-C6](https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/) 
 
 
 <a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/blob/main/hardware/Schematics_PULSAR_ESP32_C6_V1_6.pdf"><img src="resources/Schematics_icon.jpg?raw=false" width="500px"><br/> Schematics</a>
