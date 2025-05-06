@@ -1,7 +1,7 @@
 General Purpose Input/Output (GPIO) Pins 
 ========================================
 
-The General Purpose Input/Output (GPIO) pins on the **PULSAR NANO ESP32 C6** development board are used to connect external devices to the microcontroller. These pins can be configured as either input or output. In this section, we will explore how to work with GPIO pins on the **PULSAR NANO ESP32 C6** development board using both MicroPython and C++.
+The General Purpose Input/Output (GPIO) pins on the **PULSAR C6** development board are used to connect external devices to the microcontroller. These pins can be configured as either input or output. In this section, we will explore how to work with GPIO pins on the **PULSAR C6** development board using both MicroPython and C++.
 
 .. _figura2-dualmcu-one:
 
@@ -9,9 +9,9 @@ The General Purpose Input/Output (GPIO) pins on the **PULSAR NANO ESP32 C6** dev
    :align: center
    :width: 60%
 
-   **PULSAR NANO ESP32 C6** Development Board
+   **PULSAR C6** Development Board
 
-Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the **PULSAR NANO ESP32 C6** development board using both MicroPython and C++.
+Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the **PULSAR C6** development board using both MicroPython and C++.
 
 Working with LEDs on ESP32-C6
 -----------------------------
@@ -23,7 +23,7 @@ LED Blinking Example
 
 .. tip::
 
-   The following example demonstrates how to blink an LED connected to GPIO pin 6 on the **PULSAR NANO ESP32 C6** development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
+   The following example demonstrates how to blink an LED connected to GPIO pin 6 on the **PULSAR C6** development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.
 
 .. tabs::
 

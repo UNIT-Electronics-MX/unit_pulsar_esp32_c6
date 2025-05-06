@@ -1,19 +1,19 @@
-Development Board NANOC6
+PULSARC6 Development Board 
 ==================================
 
 Introduction
 ------------
 
-This guide will help you get started with the **PULSAR NANO ESP32 C6** development board. The **PULSAR NANO ESP32 C6** is a development board based on the ESP32C6 microcontroller. It is designed for prototyping and developing IoT applications. The board features a variety of interfaces, including GPIO, I2C, SPI, UART, and more. It also has built-in support for Wi-Fi and Bluetooth connectivity.
+This guide will help you get started with the **PULSAR C6** development board. The **PULSAR C6** is a development board based on the ESP32C6 microcontroller. It is designed for prototyping and developing IoT applications. The board features a variety of interfaces, including GPIO, I2C, SPI, UART, and more. It also has built-in support for Wi-Fi and Bluetooth connectivity.
 
 
 .. _figure_dualmcu_one:
 .. figure:: /_static/nanoc6/top.png
    :align: center
-   :alt: **PULSAR NANO ESP32 C6** Development Board
+   :alt: **PULSAR C6** Development Board
    :width: 60%
    
-   **PULSAR NANO ESP32 C6** Development Board
+   **PULSAR C6** Development Board
 
  
 

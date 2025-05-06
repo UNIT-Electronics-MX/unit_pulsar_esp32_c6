@@ -1,7 +1,7 @@
 Desktop Environment 
 ===================
 
-The environment setup is the first step to start working with the NANO C6 board.
+The environment setup is the first step to start working with the PULSAR C6 board.
 The following steps will guide you through the setup process.
 
 1. Install the required software
@@ -13,10 +13,10 @@ The following steps will guide you through the setup process.
 Install the required software
 -----------------------------
 
-The following software is required to start working with the NANO C6 board:
+The following software is required to start working with the PULSAR C6 board:
 
-1. **Python 3.7 or later**: Python is required to run the scripts and tools provided by the NANO C6 board.
-2. **Git**: Git is required to clone the NANO C6 board repository.
+1. **Python 3.7 or later**: Python is required to run the scripts and tools provided by the PULSAR C6 board.
+2. **Git**: Git is required to clone the PULSAR C6 board repository.
 3. **MinGW**: MinGW is a native Windows port of the GNU Compiler Collection (GCC), with freely distributable import libraries and header files for building native Windows applications.
 4. **Visual Studio Code**: Visual Studio Code is a code editor that is required to write and compile the code.
 
@@ -245,7 +245,7 @@ To install the Arduino IDE, follow the instructions for your operating system in
 Thonny IDE Installation
 ------------------------
 
-Thonny is a Python IDE that is designed for beginners. It provides a simple interface and built-in support for MicroPython, making it an excellent choice for programming the NANO C6 board.
+Thonny is a Python IDE that is designed for beginners. It provides a simple interface and built-in support for MicroPython, making it an excellent choice for programming the PULSAR C6 board.
 
 Follow the instructions for your operating system in the 
 

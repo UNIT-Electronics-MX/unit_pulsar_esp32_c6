@@ -1,9 +1,9 @@
 WS2812 Control 
 =================
-Harness the power of WS1280 LED strips with the NANO C6 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
+Harness the power of WS1280 LED strips with the PULSAR  C6 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.
 
-This section describes how to control WS2812 LED strips using the NANO C6 board.
-The NANO C6 board has a GPIO pin embebbed connected to the single WS2812 LED.
+This section describes how to control WS2812 LED strips using the PULSAR  C6 board.
+The PULSAR  C6 board has a GPIO pin embebbed connected to the single WS2812 LED.
 
 .. list-table:: Pin Mapping for WS2812
    :widths: 10 10
@@ -15,7 +15,7 @@ The NANO C6 board has a GPIO pin embebbed connected to the single WS2812 LED.
    * - DIN
      - 8
 
-.. _figura-NANO C6-one:
+.. _figura-PULSAR  C6-one:
 
 .. figure:: /_static/WS1280_LED.jpg
    :align: center
@@ -27,7 +27,7 @@ The NANO C6 board has a GPIO pin embebbed connected to the single WS2812 LED.
 Code Example
 ------------
 
-Below is an example that demonstrates how to control WS1280 LED strips using the  Nano C6 board
+Below is an example that demonstrates how to control WS1280 LED strips using the  PULSAR  C6 board
 
 .. tabs::
 

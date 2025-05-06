@@ -1,7 +1,7 @@
 I2C (Inter-Integrated Circuit)
 ===============================
 
-Discover the I2C communication protocol and learn how to communicate with I2C devices using the NANO C6 board. This section will cover I2C bus setup and communication with I2C peripherals.
+Discover the I2C communication protocol and learn how to communicate with I2C devices using the PULSAR  C6 board. This section will cover I2C bus setup and communication with I2C peripherals.
 
 .. .. _figure_i2c:
 
@@ -15,11 +15,11 @@ Discover the I2C communication protocol and learn how to communicate with I2C de
 I2C Overview
 ------------
 
-I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The NANO C6 development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.
+I2C (Inter-Integrated Circuit) is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus. It is commonly used to connect low-speed peripherals to processors and microcontrollers. The PULSAR  C6 development board features I2C communication capabilities, allowing you to interface with a wide range of I2C devices.
 
 Pinout Details
 --------------
-Below is the pinout table for the I2C connections on the NANO C6, detailing the pin assignments for SDA and SCL.
+Below is the pinout table for the I2C connections on the PULSAR  C6, detailing the pin assignments for SDA and SCL.
 
 .. list-table:: ESP32-C6 Pinout
   :widths: 20 20

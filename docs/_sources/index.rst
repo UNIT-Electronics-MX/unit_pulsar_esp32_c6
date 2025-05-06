@@ -4,13 +4,13 @@
    contain the root `toctree` directive.
 
 
-**PULSAR NANO ESP32 C6** Development Board
+**PULSAR C6** Development Board
 ==========================================
 
 .. note::
 	You are  reading the most recent version available. 
 
-Documentation for the UNIT NANO ESP32C6 Development Board. This board is a versatile ultra-low-power microcontroller with advanced connectivity and peripheral features, making it suitable for a wide range of IoT and embedded applications.
+Documentation for the UNIT PULSAR C6 Development Board. This board is a versatile ultra-low-power microcontroller with advanced connectivity and peripheral features, making it suitable for a wide range of IoT and embedded applications.
 
 .. _figura3-dualmcu-one:
 

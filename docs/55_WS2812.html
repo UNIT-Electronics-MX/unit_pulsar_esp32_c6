@@ -170,7 +170,7 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="00_about.html">Development Board NANOC6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">PULSARC6 Development Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
@@ -408,9 +408,9 @@ document.write(`
                   
   <section id="ws2812-control">
 <h1>WS2812 Control<a class="headerlink" href="#ws2812-control" title="Link to this heading">#</a></h1>
-<p>Harness the power of WS1280 LED strips with the NANO C6 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.</p>
-<p>This section describes how to control WS2812 LED strips using the NANO C6 board.
-The NANO C6 board has a GPIO pin embebbed connected to the single WS2812 LED.</p>
+<p>Harness the power of WS1280 LED strips with the PULSAR  C6 board. Learn how to control RGB LED strips and create dazzling lighting effects using MicroPython.</p>
+<p>This section describes how to control WS2812 LED strips using the PULSAR  C6 board.
+The PULSAR  C6 board has a GPIO pin embebbed connected to the single WS2812 LED.</p>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id1">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">Pin Mapping for WS2812</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <colgroup>
@@ -430,14 +430,14 @@ The NANO C6 board has a GPIO pin embebbed connected to the single WS2812 LED.</p
 </table>
 </div>
 <figure class="align-center" id="id2">
-<span id="figura-nano-c6-one"></span><a class="reference internal image-reference" href="_images/WS1280_LED.jpg"><img alt="rgb led" src="_images/WS1280_LED.jpg" style="width: 40%;" /></a>
+<span id="figura-pulsar-c6-one"></span><a class="reference internal image-reference" href="_images/WS1280_LED.jpg"><img alt="rgb led" src="_images/WS1280_LED.jpg" style="width: 40%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 19 </span><span class="caption-text">WS2812 LED Strip</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="code-example">
 <h2>Code Example<a class="headerlink" href="#code-example" title="Link to this heading">#</a></h2>
-<p>Below is an example that demonstrates how to control WS1280 LED strips using the  Nano C6 board</p>
+<p>Below is an example that demonstrates how to control WS1280 LED strips using the  PULSAR  C6 board</p>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
 <span class="kn">from</span> <span class="nn">neopixel</span> <span class="kn">import</span> <span class="n">NeoPixel</span>

@@ -8,7 +8,7 @@ Squematic Diagram
 .. raw:: html
 
    <div style="text-align: center;">
-      <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/nanoc6/Schematics_UNIT NANO_C6_V1_6.pdf', '_blank')">**PULSAR NANO ESP32 C6** </button>
+      <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('./_static/nanoc6/Schematics_UNIT NANO_C6_V1_6.pdf', '_blank')">PULSAR C6</button>
    </div>
    <br> </br>
    <iframe src="./_static/nanoc6/Schematics_UNIT NANO_C6_V1_6.pdf" style="width:100%; height:500px;" frameborder="0"></iframe>
@@ -28,7 +28,7 @@ Pinout  distribution
         <a href="./_static/nanoc6/Nano-C6-Pinout_EN.jpg" target="_blank">
             <img 
                 src="./_static/nanoc6/Nano-C6-Pinout_EN.jpg" 
-                alt="**PULSAR NANO ESP32 C6** Pinout" 
+                alt="PULSAR  C6 Pinout" 
                 style="width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px;"
             >
         </a>
@@ -40,7 +40,7 @@ Pinout  distribution
 
 
 
-The following table provides the pinout details for the **PULSAR NANO ESP32 C6** and ESP32 C6 boards.
+The following table provides the pinout details for the **PULSAR C6** and ESP32 C6 boards.
 
 .. list-table:: 
    :header-rows: 1
@@ -48,7 +48,7 @@ The following table provides the pinout details for the **PULSAR NANO ESP32 C6**
 
    * - Arduino Nano Pin
      - Arduino Nano Description
-     - **PULSAR NANO ESP32 C6**
+     - **PULSAR C6**
      - ESP32 C6
    * - 1
      - D13 (SCK/LED)
