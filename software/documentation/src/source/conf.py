@@ -39,7 +39,7 @@ copybutton_only_copy_prompt_lines = False  # Copies all lines, including those w
 
 templates_path = ['_templates']
 html_theme_options = {
-    "repository_url": "https://github.com/UNIT-Electronics/UNIT_NANO_C6",
+    "repository_url": "https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6",
     "repository_branch": "main",  # Rama principal de tu repositorio
       "path_to_docs": "docs/",  # Ruta a la documentación dentro del repositorio
     "use_repository_button": True,  # Muestra un botón que enlaza al repositorio

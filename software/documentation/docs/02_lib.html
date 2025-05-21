@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>General Purpose Input/Output (GPIO) Pins &#8212; UNIT NANO C6 0.0.1 documentation</title>
+    <title>Installing packages - Micropython &#8212; UNIT NANO C6 0.0.1 documentation</title>
   
   
   
@@ -49,15 +49,14 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="_static/tabs.js?v=3030b3cb"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '11_gpio';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02_lib';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Analog to Digital Conversion" href="22_adc.html" />
-    <link rel="prev" title="Development board" href="03_pinout.html" />
+    <link rel="next" title="ESP-IDF Getting Started" href="02_1_esp-idf.html" />
+    <link rel="prev" title="Desktop Environment" href="01_setup.html" />
     <link rel="icon" href="_static/3.png" type="image/x-icon">
     <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
 
@@ -172,10 +171,10 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="00_about.html">PULSARC6 Development Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing packages - Micropython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">General Purpose Input/Output (GPIO) Pins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
@@ -236,7 +235,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -253,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/edit/main/docs/11_gpio.rst" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/edit/main/docs/02_lib.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -270,7 +269,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/issues/new?title=Issue%20on%20page%20%2F11_gpio.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/issues/new?title=Issue%20on%20page%20%2F02_lib.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +299,7 @@
       
       
       
-      <li><a href="_sources/11_gpio.rst" target="_blank"
+      <li><a href="_sources/02_lib.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -384,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>General Purpose Input/Output (GPIO) Pins</h1>
+    <h1>Installing packages - Micropython</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -394,10 +393,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-leds-on-esp32-c6">Working with LEDs on ESP32-C6</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#led-blinking-example">LED Blinking Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-guide-using-mip-library">Installation Guide Using MIP Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
             </nav>
         </div>
@@ -409,85 +415,124 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="general-purpose-input-output-gpio-pins">
-<h1>General Purpose Input/Output (GPIO) Pins<a class="headerlink" href="#general-purpose-input-output-gpio-pins" title="Link to this heading">#</a></h1>
-<p>The General Purpose Input/Output (GPIO) pins on the <strong>PULSAR C6</strong> development board are used to connect external devices to the microcontroller. These pins can be configured as either input or output. In this section, we will explore how to work with GPIO pins on the <strong>PULSAR C6</strong> development board using both MicroPython and C++.</p>
-<figure class="align-center" id="id1">
-<span id="figura2-dualmcu-one"></span><a class="reference internal image-reference" href="_images/top.png"><img alt="_images/top.png" src="_images/top.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text"><strong>PULSAR C6</strong> Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Let’s begin with a simple example: blinking an LED. This example demonstrates how to control GPIO pins on the <strong>PULSAR C6</strong> development board using both MicroPython and C++.</p>
-<section id="working-with-leds-on-esp32-c6">
-<h2>Working with LEDs on ESP32-C6<a class="headerlink" href="#working-with-leds-on-esp32-c6" title="Link to this heading">#</a></h2>
-<p>In this section, we will learn how to control a single LED using a microcontroller. The LED will be connected to a GPIO pin, and we will control its on/off states using a simple program.</p>
-<section id="led-blinking-example">
-<h3>LED Blinking Example<a class="headerlink" href="#led-blinking-example" title="Link to this heading">#</a></h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The following example demonstrates how to blink an LED connected to GPIO pin 6 on the <strong>PULSAR C6</strong> development board. The LED will turn on for 1 second and then turn off for 1 second, repeating this pattern indefinitely.</p>
+  <section id="installing-packages-micropython">
+<h1>Installing packages - Micropython<a class="headerlink" href="#installing-packages-micropython" title="Link to this heading">#</a></h1>
+<p>This section will guide you through the installation process of the required libraries using
+the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> package manager.</p>
+<section id="installation-guide-using-mip-library">
+<h2>Installation Guide Using MIP Library<a class="headerlink" href="#installation-guide-using-mip-library" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <cite>mip</cite> library is utilized to install other libraries on the NANOC6 board.</p>
 </div>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ESP32C6 device</p></li>
+<li><p>Thonny IDE</p></li>
+<li><p>Wi-Fi credentials (SSID and Password)</p></li>
+</ul>
+</section>
+<section id="installation-instructions">
+<h3>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Link to this heading">#</a></h3>
+<p>Follow the steps below to install the <cite>max1704x.py</cite> library:</p>
+</section>
+<section id="connect-to-wi-fi">
+<h3>Connect to Wi-Fi<a class="headerlink" href="#connect-to-wi-fi" title="Link to this heading">#</a></h3>
+<p>Copy and run the code below in Thonny to connect your ESP32 to a Wi-Fi network:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mip</span>
+<span class="kn">import</span> <span class="nn">network</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
-<span class="n">led</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">connect_wifi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+   <span class="n">wlan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+   <span class="n">wlan</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+   <span class="n">wlan</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">loop</span><span class="p">():</span>
-    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-        <span class="n">led</span><span class="o">.</span><span class="n">on</span><span class="p">()</span>  <span class="c1"># Turn the LED on</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
-        <span class="n">led</span><span class="o">.</span><span class="n">off</span><span class="p">()</span>  <span class="c1"># Turn the LED off</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Wait for 1 second</span>
+   <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+      <span class="k">if</span> <span class="n">wlan</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connected to the Wi-Fi network&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+      <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">loop</span><span class="p">()</span>
+   <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Could not connect to the Wi-Fi network&#39;</span><span class="p">)</span>
+   <span class="k">return</span> <span class="kc">None</span>
+
+
+ <span class="n">ssid</span> <span class="o">=</span> <span class="s2">&quot;your_ssid&quot;</span>
+ <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;your_password&quot;</span>
+
+<span class="n">ip_address</span> <span class="o">=</span> <span class="n">connect_wifi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ip_address</span><span class="p">)</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/UNIT-Electronics/MAX1704X_lib/refs/heads/main/Software/MicroPython/example/max1704x.py&#39;</span><span class="p">)</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Cesarbautista10/Libraries_compatibles_with_micropython/refs/heads/main/Libs/oled.py&#39;</span><span class="p">)</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Cesarbautista10/Libraries_compatibles_with_micropython/refs/heads/main/Libs/sdcard.py&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define LED 6</span>
-
-<span class="c1">// The setup function runs once when you press reset or power the board</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Initialize digital pin LED as an output.</span>
-<span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="c1">// The loop function runs continuously</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span><span class="w">   </span><span class="c1">// Turn the LED on (HIGH is the voltage level)</span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">              </span><span class="c1">// Wait for 1 second</span>
-<span class="w">    </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span><span class="w">   </span><span class="c1">// Turn the LED off (LOW is the voltage level)</span>
-<span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span><span class="w">              </span><span class="c1">// Wait for 1 second</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;freertos/FreeRTOS.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;freertos/task.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/gpio.h&quot;</span>
-
-<span class="cp">#define BLINK_GPIO GPIO_NUM_6  </span><span class="c1">// Puedes cambiarlo según tu hardware</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">app_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">// Configura el GPIO como salida</span>
-<span class="w">    </span><span class="n">gpio_reset_pin</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">);</span>
-<span class="w">    </span><span class="n">gpio_set_direction</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_MODE_OUTPUT</span><span class="p">);</span>
-
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Enciende el LED</span>
-<span class="w">        </span><span class="n">gpio_set_level</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">        </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span><span class="w"> </span><span class="c1">// 500 ms</span>
-
-<span class="w">        </span><span class="c1">// Apaga el LED</span>
-<span class="w">        </span><span class="n">gpio_set_level</span><span class="p">(</span><span class="n">BLINK_GPIO</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">        </span><span class="n">vTaskDelay</span><span class="p">(</span><span class="n">pdMS_TO_TICKS</span><span class="p">(</span><span class="mi">500</span><span class="p">));</span><span class="w"> </span><span class="c1">// 500 ms</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div></div>
 </section>
+</section>
+<section id="dualmcu-library">
+<h2>DualMCU Library<a class="headerlink" href="#dualmcu-library" title="Link to this heading">#</a></h2>
+<p>Firstly, you need install Thonny IDE. You can download it from the <a class="reference external" href="https://thonny.org/">Thonny website</a>.</p>
+<ol class="arabic simple">
+<li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
+<li><p>Navigate to <strong>Tools</strong> -&gt; <strong>Manage Packages</strong>.</p></li>
+<li><p>Search for <code class="docutils literal notranslate"><span class="pre">dualmcu</span></code> and click <strong>Install</strong>.</p></li>
+</ol>
+<figure class="align-center" id="id1">
+<span id="figure-dualmcu-libary"></span><a class="reference internal image-reference" href="_images/dualmcu_library.png"><img alt="DualMCU Library" src="_images/dualmcu_library.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">DualMCU Library</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>Successfully installed the library.</p></li>
+</ol>
+<figure class="align-center" id="id2">
+<span id="figure-dualmcu-libary-success"></span><a class="reference internal image-reference" href="_images/dualmcu_library_success.png"><img alt="DualMCU Library" src="_images/dualmcu_library_success.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">DualMCU Library Successfully Installed</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Alternatively, download the library from <a class="reference external" href="https://pypi.org/project/dualmcu/">dualmcu.py</a>.</p>
+<section id="usage">
+<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
+<p>The library provides a set of tools to help developers work with the DualMCU ONE board. The following are the main features of the library:</p>
+<ul class="simple">
+<li><p><strong>I2C Support</strong>: The library provides support for I2C communication protocol, making it easy to interface with a wide range of sensors and devices.</p></li>
+<li><p><strong>Arduino Shields Compatibility</strong>: The library is compatible with Arduino Shields, making it easy to use a wide range of shields and accessories with the DualMCU ONE board.</p></li>
+<li><p><strong>SDcard Support</strong>: The library provides support for SD cards, allowing developers to easily read and write data to SD cards.</p></li>
+</ul>
+<p>Examples of the library usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<span class="kn">from</span> <span class="nn">dualmcu</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">22</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
+
+<span class="n">oled</span> <span class="o">=</span> <span class="n">SSD1306_I2C</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">i2c</span><span class="p">)</span>
+
+<span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;UNIT&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;ELECTRONICS&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="libraries-available">
+<h2>Libraries available<a class="headerlink" href="#libraries-available" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/dualmcu/">Dualmcu</a> : The library provides a set of tools to help developers work with the DualMCU ONE board. The library is actively maintained and updated to provide the best experience for developers working with the DualMCU ONE board. For more information and updates, visit the <cite>dualmcu GitHub repository`</cite></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/ocks/">Ocks</a> : The library provides support for I2C communication protocol.</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/sdcard-lib/">SDcard-lib</a> : The library provides support for SD cards, allowing developers to easily read and write data to SD cards; all rights remain with the original author.</p></li>
+</ul>
+<p>The library is actively maintained and updated to provide the best experience for developers working with
+the DualMCU ONE board.</p>
 </section>
 </section>
 
@@ -503,20 +548,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="03_pinout.html"
+       href="01_setup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Development board</p>
+        <p class="prev-next-title">Desktop Environment</p>
       </div>
     </a>
     <a class="right-next"
-       href="22_adc.html"
+       href="02_1_esp-idf.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analog to Digital Conversion</p>
+        <p class="prev-next-title">ESP-IDF Getting Started</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -536,10 +581,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-leds-on-esp32-c6">Working with LEDs on ESP32-C6</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#led-blinking-example">LED Blinking Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-guide-using-mip-library">Installation Guide Using MIP Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation Instructions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
   </nav></div>
 

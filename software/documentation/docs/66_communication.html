@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ESP-IDF Getting Started &#8212; UNIT NANO C6 0.0.1 documentation</title>
+    <title>Communication &#8212; UNIT NANO C6 0.0.1 documentation</title>
   
   
   
@@ -52,11 +52,11 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '02_1_esp-idf';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '66_communication';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Development board" href="03_pinout.html" />
-    <link rel="prev" title="Installing packages - Micropython" href="02_lib.html" />
+    <link rel="next" title="How to Generate an Error Report" href="report.html" />
+    <link rel="prev" title="WS2812 Control" href="55_WS2812.html" />
     <link rel="icon" href="_static/3.png" type="image/x-icon">
     <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
 
@@ -172,14 +172,14 @@
 <li class="toctree-l1"><a class="reference internal" href="00_about.html">PULSARC6 Development Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">ESP-IDF Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a></li>
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
-<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
 
@@ -235,7 +235,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -252,7 +252,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/edit/main/docs/02_1_esp-idf.rst" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/edit/main/docs/66_communication.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -269,7 +269,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/issues/new?title=Issue%20on%20page%20%2F02_1_esp-idf.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/issues/new?title=Issue%20on%20page%20%2F66_communication.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +299,7 @@
       
       
       
-      <li><a href="_sources/02_1_esp-idf.rst" target="_blank"
+      <li><a href="_sources/66_communication.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +383,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ESP-IDF Getting Started</h1>
+    <h1>Communication</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,9 +393,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation Steps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-the-installation-path">Customizing the Installation Path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-esp-idf">First Steps with ESP-IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serial">Serial</a></li>
 </ul>
             </nav>
         </div>
@@ -407,158 +407,100 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="esp-idf-getting-started">
-<h1>ESP-IDF Getting Started<a class="headerlink" href="#esp-idf-getting-started" title="Link to this heading">#</a></h1>
-<p>The ESP-IDF (Espressif IoT Development Framework) is the official development framework for ESP32 series chips. It provides a comprehensive suite of tools, libraries, and APIs to facilitate application development for ESP32 devices.</p>
-<p>This section offers a step-by-step guide to setting up the ESP-IDF environment for the ESP32-C6 chip, including installation instructions and basic usage examples. While the focus is on the ESP32-C6, the guidelines are generally applicable to other ESP32 chips.</p>
-<p><strong>Supported Environment:</strong> Ubuntu 20.04 or later.</p>
-<p>For users on other operating systems, please consult the official ESP-IDF documentation for platform-specific instructions.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><strong>ESP-IDF</strong> is compatible with Windows and macOS, but the installation process may differ. Refer to the official documentation for detailed instructions.</p>
-<div style="text-align: center; margin-top: 10px;">
-    <p>Visit the official ESP-IDF documentation for platform-specific guidance:</p>
-    <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html" target="_blank" style="text-decoration: none;">
-        <button style="background-color: #0078D7; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-            Open ESP-IDF Documentation
-        </button>
-    </a>
-</div></div>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>A stable internet connection is required during installation, as some steps involve downloading necessary files.</p>
-</div>
-<section id="installation-steps">
-<h2>Installation Steps<a class="headerlink" href="#installation-steps" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p><strong>Install Prerequisites</strong>
-Ensure all required dependencies are installed. Execute the following commands in a terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>wget<span class="w"> </span>flex<span class="w"> </span>bison<span class="w"> </span>gperf<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>python3-setuptools<span class="w"> </span>python3-venv<span class="w"> </span>cmake<span class="w"> </span>ninja-build<span class="w"> </span>ccache<span class="w"> </span>libffi-dev<span class="w"> </span>libssl-dev<span class="w"> </span>dfu-util<span class="w"> </span>device-tree-compiler
+  <section id="communication">
+<h1>Communication<a class="headerlink" href="#communication" title="Link to this heading">#</a></h1>
+<p>Unlock the full communication potential of the NANO ESP32C6 board with various communication protocols and interfaces. Learn how to set up and use Wi-Fi, Bluetooth, and serial communication to connect with other devices and networks.</p>
+<section id="wi-fi">
+<h2>Wi-Fi<a class="headerlink" href="#wi-fi" title="Link to this heading">#</a></h2>
+<p>Learn how to set up and use Wi-Fi communication on the DualMCU ONE board.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<span class="kn">import</span> <span class="nn">network</span>
+
+<span class="n">wlan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
+<span class="n">wlan</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">wlan</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;your-ssid&#39;</span><span class="p">,</span> <span class="s1">&#39;your-password&#39;</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">wlan</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
+    <span class="k">pass</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connected to Wi-Fi&#39;</span><span class="p">)</span>
+
+<span class="c1"># Check the IP address</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
 </pre></div>
-</div>
-</li>
-<li><p><strong>Clone the ESP-IDF Repository</strong>
-Clone the ESP-IDF repository from GitHub. Optionally, specify a particular version or branch.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/espressif/esp-idf.git
-</pre></div>
-</div>
-</li>
-<li><p><strong>Set Up the Environment</strong>
-Navigate to the cloned ESP-IDF directory and execute the setup script to configure environment variables.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>esp-idf
-./install.sh
-.<span class="w"> </span>./export.sh
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To install tools for all supported chips, use the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">install</span><span class="o">.</span><span class="n">sh</span> <span class="o">--</span><span class="nb">all</span>
-</pre></div>
-</div>
-</div>
-</li>
-<li><p><strong>Install Additional Tools</strong>
-For ESP32-C6-specific tools, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./install.sh<span class="w"> </span>--esp32c6
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <cite>install.sh</cite> script downloads and installs the required tools and dependencies for the ESP32-C6 chip. The duration depends on your internet speed.</p>
-</div>
-</li>
-<li><p><strong>Verify Installation</strong>
-Confirm the installation by checking the ESP-IDF version:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>--version
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="customizing-the-installation-path">
-<h2>Customizing the Installation Path<a class="headerlink" href="#customizing-the-installation-path" title="Link to this heading">#</a></h2>
-<p>To customize the installation path of ESP-IDF, set the <cite>IDF_PATH</cite> environment variable. For example:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">IDF_PATH</span><span class="o">=</span>/path/to/your/esp-idf
-.<span class="w"> </span><span class="nv">$IDF_PATH</span>/export.sh
-.<span class="w"> </span><span class="nv">$IDF_PATH</span>/install.sh
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Replace <cite>/path/to/your/esp-idf</cite> with the desired installation directory. This ensures the <cite>IDF_PATH</cite> variable points to the correct location, and the <cite>export.sh</cite> and <cite>install.sh</cite> scripts are executed from there.</p>
 </div>
 </section>
-<section id="first-steps-with-esp-idf">
-<h2>First Steps with ESP-IDF<a class="headerlink" href="#first-steps-with-esp-idf" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p><strong>Create a New Project</strong>
-Create a directory for your ESP-IDF project and navigate to it:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>my_project
-<span class="nb">cd</span><span class="w"> </span>my_project
+<section id="bluetooth">
+<h2>Bluetooth<a class="headerlink" href="#bluetooth" title="Link to this heading">#</a></h2>
+<p>Explore Bluetooth communication capabilities and learn how to connect to Bluetooth devices.</p>
+<p>scan sniffer Code</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bluetooth</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Initialize Bluetooth</span>
+<span class="n">ble</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">BLE</span><span class="p">()</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Helper function to convert memoryview to MAC address string</span>
+<span class="k">def</span> <span class="nf">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02x}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">addr</span><span class="p">)</span>
+
+<span class="c1"># Helper function to parse device name from advertising data</span>
+<span class="k">def</span> <span class="nf">decode_name</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
+        <span class="n">ad_length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">ad_type</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x09</span><span class="p">:</span>  <span class="c1"># Complete Local Name</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x08</span><span class="p">:</span>  <span class="c1"># Shortened Local Name</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="n">ad_length</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+<span class="c1"># Global counter for devices found</span>
+<span class="n">devices_found</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">max_devices</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Limit to 10 devices</span>
+
+<span class="c1"># Callback function to handle advertising reports</span>
+<span class="k">def</span> <span class="nf">bt_irq</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">devices_found</span>
+    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># event 5 is for advertising reports</span>
+        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
+            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
+
+        <span class="n">addr_type</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">adv_type</span><span class="p">,</span> <span class="n">rssi</span><span class="p">,</span> <span class="n">adv_data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">mac_addr</span> <span class="o">=</span> <span class="n">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
+        <span class="n">device_name</span> <span class="o">=</span> <span class="n">decode_name</span><span class="p">(</span><span class="n">adv_data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">device_name</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: </span><span class="si">{</span><span class="n">device_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: Unknown&quot;</span><span class="p">)</span>
+
+        <span class="n">devices_found</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment counter</span>
+
+        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
+            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Set the callback function</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">bt_irq</span><span class="p">)</span>
+
+<span class="c1"># Start active scanning</span>
+<span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Active scan for 10 seconds with interval and window of 30ms</span>
+
+<span class="c1"># Keep the program running to allow the callback to be processed</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-</li>
-<li><p><strong>Generate a Basic Application</strong>
-Use the <cite>idf.py</cite> tool to create a basic application template:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>create-project<span class="w"> </span>my_app
-</pre></div>
-</div>
-</li>
-<li><p><strong>Build the Project</strong>
-Navigate to the project directory and build the application:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>my_app
-idf.py<span class="w"> </span>build
-</pre></div>
-</div>
-</li>
-<li><p><strong>Flash the Application</strong>
-Connect your ESP32-C6 board to your computer and flash the application:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>-p<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>flash
-</pre></div>
-</div>
-</li>
-<li><p><strong>Monitor the Output</strong>
-Monitor the output from the ESP32-C6 board:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>-p<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>monitor
-</pre></div>
-</div>
-</li>
-<li><p><strong>Modify the Code</strong>
-Edit the code in the <cite>main</cite> directory of your project. The main application file is typically named <cite>main.c</cite> or <cite>main.cpp</cite>. After making changes, rebuild and flash the project.</p></li>
-<li><p><strong>Clean the Project</strong>
-To remove all build artifacts, run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>idf.py<span class="w"> </span>fullclean
-</pre></div>
-</div>
-</li>
-<li><p><strong>Update ESP-IDF</strong>
-To update ESP-IDF to the latest version, navigate to the ESP-IDF directory and execute:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
-./install.sh
-.<span class="w"> </span>./export.sh
-</pre></div>
-</div>
-</li>
-<li><p><strong>Uninstall ESP-IDF</strong>
-To uninstall ESP-IDF, delete the cloned repository and unset related environment variables:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>esp-idf
-<span class="nb">unset</span><span class="w"> </span>IDF_PATH
-<span class="nb">unset</span><span class="w"> </span>PATH
-<span class="nb">unset</span><span class="w"> </span>LD_LIBRARY_PATH
-<span class="nb">unset</span><span class="w"> </span>PYTHONPATH
-<span class="nb">unset</span><span class="w"> </span>CMAKE_PREFIX_PATH
-</pre></div>
-</div>
-</li>
-<li><p><strong>Explore ESP-IDF Examples</strong>
-The ESP-IDF repository includes numerous example projects demonstrating various features. These can be found in the <cite>examples</cite> directory. Copy and modify any example project as needed.</p></li>
-<li><p><strong>Refer to ESP-IDF Documentation</strong>
-For comprehensive information, including API references and guides, visit the official ESP-IDF documentation: <a class="reference external" href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html">ESP-IDF Documentation</a>.</p></li>
-<li><p><strong>Join the ESP-IDF Community</strong>
-For assistance or discussions, join the ESP-IDF community on GitHub or the Espressif Community Forum. The community is active and provides support for various ESP32 development topics.</p></li>
-</ol>
+</section>
+<section id="serial">
+<h2>Serial<a class="headerlink" href="#serial" title="Link to this heading">#</a></h2>
+<p>Learn about serial communication and how to communicate with other devices via serial ports.</p>
 </section>
 </section>
 
@@ -574,20 +516,20 @@ For assistance or discussions, join the ESP-IDF community on GitHub or the Espre
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02_lib.html"
+       href="55_WS2812.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installing packages - Micropython</p>
+        <p class="prev-next-title">WS2812 Control</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_pinout.html"
+       href="report.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Development board</p>
+        <p class="prev-next-title">How to Generate an Error Report</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -607,9 +549,9 @@ For assistance or discussions, join the ESP-IDF community on GitHub or the Espre
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-steps">Installation Steps</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#customizing-the-installation-path">Customizing the Installation Path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#first-steps-with-esp-idf">First Steps with ESP-IDF</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serial">Serial</a></li>
 </ul>
   </nav></div>
 

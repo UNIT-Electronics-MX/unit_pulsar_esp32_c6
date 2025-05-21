@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PULSARC6 Development Board &#8212; UNIT NANO C6 0.0.1 documentation</title>
+    <title>PULSAR C6 Development Board &#8212; UNIT NANO C6 0.0.1 documentation</title>
   
   
   
@@ -52,11 +52,10 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '00_about';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Desktop Environment" href="01_setup.html" />
-    <link rel="prev" title="PULSAR C6 Development Board" href="index.html" />
+    <link rel="next" title="PULSARC6 Development Board" href="00_about.html" />
     <link rel="icon" href="_static/3.png" type="image/x-icon">
     <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
 
@@ -120,6 +119,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -138,7 +139,7 @@
     
   
 
-<a class="navbar-brand logo" href="index.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -168,8 +169,8 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">PULSARC6 Development Board</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">PULSARC6 Development Board</a></li>
 <li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a></li>
@@ -235,7 +236,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -252,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/edit/main/docs/00_about.rst" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/edit/main/docs/index.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -269,7 +270,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/issues/new?title=Issue%20on%20page%20%2F00_about.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +300,7 @@
       
       
       
-      <li><a href="_sources/00_about.rst" target="_blank"
+      <li><a href="_sources/index.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +384,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>PULSARC6 Development Board</h1>
+    <h1>PULSAR C6 Development Board</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,18 +394,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esp32c6-microcontroller">ESP32C6 Microcontroller</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture">Architecture</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-features">General Features</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management">Power Management</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-and-hardware-acceleration">Security and Hardware Acceleration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#development-support">Development Support</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-dimensions">Physical Dimensions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>PULSAR C6</strong> Development Board</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
-</li>
-</ul>
+
             </nav>
         </div>
     </div>
@@ -415,157 +408,106 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="pulsarc6-development-board">
-<h1>PULSARC6 Development Board<a class="headerlink" href="#pulsarc6-development-board" title="Link to this heading">#</a></h1>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>This guide will help you get started with the <strong>PULSAR C6</strong> development board. The <strong>PULSAR C6</strong> is a development board based on the ESP32C6 microcontroller. It is designed for prototyping and developing IoT applications. The board features a variety of interfaces, including GPIO, I2C, SPI, UART, and more. It also has built-in support for Wi-Fi and Bluetooth connectivity.</p>
+  <section id="pulsar-c6-development-board">
+<h1><strong>PULSAR C6</strong> Development Board<a class="headerlink" href="#pulsar-c6-development-board" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You are  reading the most recent version available.</p>
+</div>
+<p>Documentation for the UNIT PULSAR C6 Development Board. This board is a versatile ultra-low-power microcontroller with advanced connectivity and peripheral features, making it suitable for a wide range of IoT and embedded applications.</p>
 <figure class="align-center" id="id1">
-<span id="figure-dualmcu-one"></span><a class="reference internal image-reference" href="_images/top.png"><img alt="**PULSAR C6** Development Board" src="_images/top.png" style="width: 60%;" /></a>
+<span id="figura3-dualmcu-one"></span><a class="reference internal image-reference" href="_images/top.png"><img alt="esp32c6_nano" src="_images/top.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text"><strong>PULSAR C6</strong> Development Board</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">esp32c6_nano</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
-<section id="esp32c6-microcontroller">
-<h2>ESP32C6 Microcontroller<a class="headerlink" href="#esp32c6-microcontroller" title="Link to this heading">#</a></h2>
-<p>The ESP32-C6 is a versatile ultra-low-power microcontroller with advanced connectivity and peripheral features, making it suitable for a wide range of IoT and embedded applications.</p>
 <div style="text-align: center;">
-   <button style="background-color: #87cefa; color: white; border: none; padding: 10px 20px;" onclick="window.open('https://www.espressif.com/sites/default/files/documentation/esp32-c6_datasheet_en.pdf', '_blank')">ESP32C6 Datasheet</button>
-</div><section id="architecture">
-<h3>Architecture<a class="headerlink" href="#architecture" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>CPU Architecture</strong>:</p>
+   <button style="background-color: #77dd77; color: white; border: none; padding: 10px 20px; margin-right: 10px;" onclick="window.open('./_static/dualmcuone.pdf', '_blank')">Download PDF version</button>
+</div><div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
-<li><p>Based on <strong>RISC-V 32-bit ISA</strong>.</p></li>
-<li><p>Includes:</p>
-<ul>
-<li><p>A <strong>High-Performance (HP) CPU</strong> running up to <strong>160 MHz</strong> with a 4-stage pipeline.</p></li>
-<li><p>A <strong>Low-Power (LP) CPU</strong> running up to <strong>20 MHz</strong> for energy-efficient tasks.</p></li>
+<li class="toctree-l1"><a class="reference internal" href="00_about.html">PULSARC6 Development Board</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="00_about.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="00_about.html#esp32c6-microcontroller">ESP32C6 Microcontroller</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01_setup.html">Desktop Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#install-the-required-software">Install the required software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#python-3-7-or-later">Python 3.7 or later</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#git">Git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#mingw">MinGW</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#visual-studio-code">Visual Studio Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#arduino-ide-installation">Arduino IDE Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_setup.html#thonny-ide-installation">Thonny IDE Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_lib.html">Installing packages - Micropython</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#installation-guide-using-mip-library">Installation Guide Using MIP Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#dualmcu-library">DualMCU Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_lib.html#libraries-available">Libraries available</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_1_esp-idf.html">ESP-IDF Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#installation-steps">Installation Steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#customizing-the-installation-path">Customizing the Installation Path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_1_esp-idf.html#first-steps-with-esp-idf">First Steps with ESP-IDF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_pinout.html">Development board</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_pinout.html#squematic-diagram">Squematic Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_pinout.html#pinout-distribution">Pinout  distribution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_gpio.html">General Purpose Input/Output (GPIO) Pins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_gpio.html#working-with-leds-on-esp32-c6">Working with LEDs on ESP32-C6</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#adc-definition">ADC Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#adc-pin-mapping">ADC Pin Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#class-adc">Class ADC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#example-definition">Example Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#reading-values">Reading Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="22_adc.html#example-code">Example Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#i2c-overview">I2C Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#pinout-details">Pinout Details</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#scanning-for-i2c-devices">Scanning for I2C Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="33_i2c.html#ssd1306-display">SSD1306 Display</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="44_spi.html#spi-overview">SPI Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="44_spi.html#sdcard-spi">SDCard SPI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="55_WS2812.html#code-example">Code Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#wi-fi">Wi-Fi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#bluetooth">Bluetooth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="66_communication.html#serial">Serial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="report.html#steps-to-create-an-error-report">Steps to Create an Error Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report.html#review-and-follow-up">Review and Follow-Up</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li><p><strong>Memory</strong>:</p>
-<ul>
-<li><p><strong>320 KB ROM</strong> for booting and essential functions.</p></li>
-<li><p><strong>512 KB High-Performance SRAM</strong> (HP SRAM) for data and instructions.</p></li>
-<li><p><strong>16 KB Low-Power SRAM</strong> (LP SRAM), retaining data during sleep modes.</p></li>
-<li><p>Optional external flash and SRAM support through SPI, Dual SPI, Quad SPI, and QPI.</p></li>
-</ul>
-</li>
-<li><p><strong>Security Features</strong>:</p>
-<ul>
-<li><p>Secure boot and memory encryption.</p></li>
-<li><p>Cryptographic hardware accelerators for AES, RSA, SHA, ECC, and HMAC.</p></li>
-<li><p>Support for Trusted Execution Environment (TEE).</p></li>
-</ul>
-</li>
-<li><p><strong>Wireless Capabilities</strong>:</p>
-<ul>
-<li><p><strong>Wi-Fi 6 (2.4 GHz)</strong>, Bluetooth 5.3, Zigbee, and Thread (802.15.4) for versatile connectivity options.</p></li>
-<li><p>Integrated coexistence for simultaneous operation of Wi-Fi, Bluetooth, and 802.15.4.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="general-features">
-<h3>General Features<a class="headerlink" href="#general-features" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>GPIOs and I/O Functionality</strong>:</p>
-<ul>
-<li><p>Up to <strong>30 GPIOs</strong> (QFN40) or <strong>22 GPIOs</strong> (QFN32).</p></li>
-<li><p>Multiple I/O functions through pin multiplexing.</p></li>
-<li><p>Support for digital and analog configurations:</p>
-<ul>
-<li><p><strong>12-bit SAR ADC</strong> with up to 7 channels.</p></li>
-<li><p>Integrated <strong>Temperature Sensor</strong>.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Peripheral Interfaces</strong>:</p>
-<ul>
-<li><p>Digital interfaces:</p>
-<ul>
-<li><p>Two <strong>UARTs</strong>.</p></li>
-<li><p><strong>I2C</strong> and <strong>I2S</strong> for communication and audio processing.</p></li>
-<li><p><strong>SPI</strong> with multiple modes for fast data transfer.</p></li>
-</ul>
-</li>
-<li><p>PWM controllers:</p>
-<ul>
-<li><p><strong>LED PWM</strong> with up to 6 channels.</p></li>
-<li><p><strong>Motor Control PWM (MCPWM)</strong> for precision control.</p></li>
-</ul>
-</li>
-<li><p><strong>Pulse Counter</strong> for frequency and signal measurement.</p></li>
-<li><p><strong>USB Serial/JTAG Controller</strong> for debugging and serial communication.</p></li>
-</ul>
-</li>
-<li><p><strong>Timers</strong>:</p>
-<ul>
-<li><p><strong>52-bit System Timer</strong> for accurate timekeeping.</p></li>
-<li><p>Two <strong>54-bit General-Purpose Timers</strong>.</p></li>
-<li><p>Multiple <strong>Digital Watchdog Timers</strong> for reliability.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="power-management">
-<h3>Power Management<a class="headerlink" href="#power-management" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Supports four power modes for optimal energy usage:</p>
-<ul>
-<li><p><strong>Active</strong>, <strong>Modem-sleep</strong>, <strong>Light-sleep</strong>, and <strong>Deep-sleep</strong>.</p></li>
-</ul>
-</li>
-<li><p>Ultra-low power consumption in <strong>Deep-sleep mode</strong> (7 µA).</p></li>
-<li><p>Retains memory and critical functions in low-power modes.</p></li>
-</ul>
-</section>
-<section id="security-and-hardware-acceleration">
-<h3>Security and Hardware Acceleration<a class="headerlink" href="#security-and-hardware-acceleration" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>General DMA Controller</strong> for efficient data transfers.</p></li>
-<li><p>Built-in hardware accelerators for cryptography:</p>
-<ul>
-<li><p><strong>AES</strong>, <strong>RSA</strong>, <strong>SHA</strong>, and <strong>ECC</strong>.</p></li>
-</ul>
-</li>
-<li><p>Secure boot and flash encryption for system integrity.</p></li>
-</ul>
-</section>
-<section id="applications">
-<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
-<p>The ESP32-C6 is ideal for various applications, including:</p>
-<ul class="simple">
-<li><p>Smart Home devices.</p></li>
-<li><p>Industrial Automation.</p></li>
-<li><p>IoT sensor hubs and data loggers.</p></li>
-<li><p>Consumer Electronics and more.</p></li>
-</ul>
-</section>
-<section id="development-support">
-<h3>Development Support<a class="headerlink" href="#development-support" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Fully compatible with Espressif’s <strong>ESP-IDF</strong> (IoT Development Framework) for professional-grade development.</p></li>
-<li><p><strong>Arduino IDE</strong> support for hobbyists and simpler programming tasks.</p></li>
-<li><p>Compatibility with third-party SDKs for integration into various workflows.</p></li>
-</ul>
-</section>
-<section id="physical-dimensions">
-<h3>Physical Dimensions<a class="headerlink" href="#physical-dimensions" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Compact form factor</strong> suitable for embedded applications.</p></li>
-<li><p>Available in QFN40 (5×5 mm) and QFN32 (5×5 mm) packages, ensuring versatility for different designs.</p></li>
-</ul>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>These are the general specifications; depending on the manufacturer and the specific ESP32-C6 module, there may be differences in features or additional capabilities.</p>
 </div>
 </section>
-</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
 </section>
 
 
@@ -579,21 +521,12 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>PULSAR C6</strong> Development Board</p>
-      </div>
-    </a>
     <a class="right-next"
-       href="01_setup.html"
+       href="00_about.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Desktop Environment</p>
+        <p class="prev-next-title">PULSARC6 Development Board</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -613,18 +546,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#esp32c6-microcontroller">ESP32C6 Microcontroller</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture">Architecture</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general-features">General Features</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-management">Power Management</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-and-hardware-acceleration">Security and Hardware Acceleration</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#development-support">Development Support</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-dimensions">Physical Dimensions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>PULSAR C6</strong> Development Board</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
-</li>
-</ul>
+
   </nav></div>
 
 </div></div>

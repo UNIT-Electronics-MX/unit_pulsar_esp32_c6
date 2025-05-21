@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Communication &#8212; UNIT NANO C6 0.0.1 documentation</title>
+    <title>How to Generate an Error Report &#8212; UNIT NANO C6 0.0.1 documentation</title>
   
   
   
@@ -52,11 +52,10 @@
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '66_communication';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'report';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="How to Generate an Error Report" href="report.html" />
-    <link rel="prev" title="WS2812 Control" href="55_WS2812.html" />
+    <link rel="prev" title="Communication" href="66_communication.html" />
     <link rel="icon" href="_static/3.png" type="image/x-icon">
     <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
 
@@ -179,8 +178,8 @@
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Communication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to Generate an Error Report</a></li>
 </ul>
 
     </div>
@@ -235,7 +234,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -252,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/edit/main/docs/66_communication.rst" target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/edit/main/docs/report.rst" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -269,7 +268,7 @@
       
       
       
-      <li><a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6/issues/new?title=Issue%20on%20page%20%2F66_communication.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/UNIT-Electronics-MX/unit_pulsar_esp32_c6/issues/new?title=Issue%20on%20page%20%2Freport.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -299,7 +298,7 @@
       
       
       
-      <li><a href="_sources/66_communication.rst" target="_blank"
+      <li><a href="_sources/report.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -383,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Communication</h1>
+    <h1>How to Generate an Error Report</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -393,9 +392,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serial">Serial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-an-error-report">Steps to Create an Error Report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-follow-up">Review and Follow-Up</a></li>
 </ul>
             </nav>
         </div>
@@ -407,100 +405,47 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="communication">
-<h1>Communication<a class="headerlink" href="#communication" title="Link to this heading">#</a></h1>
-<p>Unlock the full communication potential of the NANO ESP32C6 board with various communication protocols and interfaces. Learn how to set up and use Wi-Fi, Bluetooth, and serial communication to connect with other devices and networks.</p>
-<section id="wi-fi">
-<h2>Wi-Fi<a class="headerlink" href="#wi-fi" title="Link to this heading">#</a></h2>
-<p>Learn how to set up and use Wi-Fi communication on the DualMCU ONE board.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
-<span class="kn">import</span> <span class="nn">network</span>
-
-<span class="n">wlan</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">WLAN</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">STA_IF</span><span class="p">)</span>
-<span class="n">wlan</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">wlan</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;your-ssid&#39;</span><span class="p">,</span> <span class="s1">&#39;your-password&#39;</span><span class="p">)</span>
-
-<span class="k">while</span> <span class="ow">not</span> <span class="n">wlan</span><span class="o">.</span><span class="n">isconnected</span><span class="p">():</span>
-    <span class="k">pass</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connected to Wi-Fi&#39;</span><span class="p">)</span>
-
-<span class="c1"># Check the IP address</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">wlan</span><span class="o">.</span><span class="n">ifconfig</span><span class="p">())</span>
-</pre></div>
-</div>
+  <section id="how-to-generate-an-error-report">
+<h1>How to Generate an Error Report<a class="headerlink" href="#how-to-generate-an-error-report" title="Link to this heading">#</a></h1>
+<p>This guide explains how to generate an error report using GitHub repositories.</p>
+<section id="steps-to-create-an-error-report">
+<h2>Steps to Create an Error Report<a class="headerlink" href="#steps-to-create-an-error-report" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>Access the GitHub Repository</strong></dt><dd><p>Navigate to the <a class="reference external" href="https://github.com/UNIT-Electronics/UNIT_NANO_C6">GitHub repository</a> where the project is hosted.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Open the Issues Tab</strong></dt><dd><p>Click on the “Issues” tab located in the repository menu.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Create a New Issue</strong></dt><dd><ul class="simple">
+<li><p>Click the “New Issue” button.</p></li>
+<li><p>Provide a clear and concise title for the issue.</p></li>
+<li><p>Add a detailed description, including relevant information such as:</p>
+<ul>
+<li><p>Steps to reproduce the error.</p></li>
+<li><p>Expected and actual results.</p></li>
+<li><p>Any related logs, screenshots, or files.</p></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Submit the Issue</strong></dt><dd><p>Once the form is complete, click the “Submit” button.</p>
+</dd>
+</dl>
+</li>
+</ol>
 </section>
-<section id="bluetooth">
-<h2>Bluetooth<a class="headerlink" href="#bluetooth" title="Link to this heading">#</a></h2>
-<p>Explore Bluetooth communication capabilities and learn how to connect to Bluetooth devices.</p>
-<p>scan sniffer Code</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bluetooth</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># Initialize Bluetooth</span>
-<span class="n">ble</span> <span class="o">=</span> <span class="n">bluetooth</span><span class="o">.</span><span class="n">BLE</span><span class="p">()</span>
-<span class="n">ble</span><span class="o">.</span><span class="n">active</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Helper function to convert memoryview to MAC address string</span>
-<span class="k">def</span> <span class="nf">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s1">&#39;:&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02x}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">addr</span><span class="p">)</span>
-
-<span class="c1"># Helper function to parse device name from advertising data</span>
-<span class="k">def</span> <span class="nf">decode_name</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">:</span>
-        <span class="n">ad_length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">ad_type</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x09</span><span class="p">:</span>  <span class="c1"># Complete Local Name</span>
-            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="n">ad_type</span> <span class="o">==</span> <span class="mh">0x08</span><span class="p">:</span>  <span class="c1"># Shortened Local Name</span>
-            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">ad_length</span><span class="p">],</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="n">ad_length</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="kc">None</span>
-
-<span class="c1"># Global counter for devices found</span>
-<span class="n">devices_found</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">max_devices</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Limit to 10 devices</span>
-
-<span class="c1"># Callback function to handle advertising reports</span>
-<span class="k">def</span> <span class="nf">bt_irq</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">devices_found</span>
-    <span class="k">if</span> <span class="n">event</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>  <span class="c1"># event 5 is for advertising reports</span>
-        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
-            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
-            <span class="k">return</span>
-
-        <span class="n">addr_type</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">adv_type</span><span class="p">,</span> <span class="n">rssi</span><span class="p">,</span> <span class="n">adv_data</span> <span class="o">=</span> <span class="n">data</span>
-        <span class="n">mac_addr</span> <span class="o">=</span> <span class="n">format_mac</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span>
-        <span class="n">device_name</span> <span class="o">=</span> <span class="n">decode_name</span><span class="p">(</span><span class="n">adv_data</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">device_name</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: </span><span class="si">{</span><span class="n">device_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Device found: </span><span class="si">{</span><span class="n">mac_addr</span><span class="si">}</span><span class="s2"> (RSSI: </span><span class="si">{</span><span class="n">rssi</span><span class="si">}</span><span class="s2">) Name: Unknown&quot;</span><span class="p">)</span>
-
-        <span class="n">devices_found</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment counter</span>
-
-        <span class="k">if</span> <span class="n">devices_found</span> <span class="o">&gt;=</span> <span class="n">max_devices</span><span class="p">:</span>
-            <span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>  <span class="c1"># Stop scanning</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scan stopped, limit reached.&quot;</span><span class="p">)</span>
-
-<span class="c1"># Set the callback function</span>
-<span class="n">ble</span><span class="o">.</span><span class="n">irq</span><span class="p">(</span><span class="n">bt_irq</span><span class="p">)</span>
-
-<span class="c1"># Start active scanning</span>
-<span class="n">ble</span><span class="o">.</span><span class="n">gap_scan</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="mi">30000</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># Active scan for 10 seconds with interval and window of 30ms</span>
-
-<span class="c1"># Keep the program running to allow the callback to be processed</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="serial">
-<h2>Serial<a class="headerlink" href="#serial" title="Link to this heading">#</a></h2>
-<p>Learn about serial communication and how to communicate with other devices via serial ports.</p>
+<section id="review-and-follow-up">
+<h2>Review and Follow-Up<a class="headerlink" href="#review-and-follow-up" title="Link to this heading">#</a></h2>
+<p>The development team or maintainers will review the issue and take appropriate action to address it.</p>
 </section>
 </section>
 
@@ -516,22 +461,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="55_WS2812.html"
+       href="66_communication.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">WS2812 Control</p>
+        <p class="prev-next-title">Communication</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="report.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">How to Generate an Error Report</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -549,9 +485,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi">Wi-Fi</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bluetooth">Bluetooth</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serial">Serial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-an-error-report">Steps to Create an Error Report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-and-follow-up">Review and Follow-Up</a></li>
 </ul>
   </nav></div>
 
