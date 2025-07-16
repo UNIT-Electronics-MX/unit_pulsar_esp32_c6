@@ -239,7 +239,7 @@ To install the Arduino IDE, follow the instructions for your operating system in
 
 .. raw:: html
 
-    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/Compatibility_Arduino_upython/Arduino/" target="_blank">Unit Electronics Package Installation Guide</a>.
+    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Code/Compatibility_Arduino_upython/Arduino/" target="_blank">Unit Electronics Package Installation Guide</a>.
 
 
 Thonny IDE Installation
@@ -251,7 +251,7 @@ Follow the instructions for your operating system in the
 
 .. raw:: html
 
-    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Development_boards/Compatibility_Arduino_upython/upython/" target="_blank">Micropython Compatibility Guide</a>.
+    <a href="https://unit-electronics-mx.github.io/wiki_uelectronics/docs/Code/Compatibility_Arduino_upython/upython" target="_blank">Micropython Compatibility Guide</a>.
     <br> </br>
 
 
