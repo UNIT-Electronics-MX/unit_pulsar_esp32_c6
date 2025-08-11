@@ -50,8 +50,8 @@ Copy and run the code below in Thonny to connect your ESP32 to a Wi-Fi network:
       return None
 
 
-    ssid = "your_ssid"
-    password = "your_password"
+   ssid = "your_ssid"
+   password = "your_password"
 
    ip_address = connect_wifi(ssid, password)
    print(ip_address)

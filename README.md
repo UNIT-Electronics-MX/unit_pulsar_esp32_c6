@@ -1,6 +1,10 @@
 # PULSAR C6 ESP32-C6 Development Board
-
-<a href="https://uelectronics.com/producto/unit-pulsar-esp32-c6/"><img src="hardware/resources/IMG_5464.png" width="600px"><br/>
+<p align="center">
+  <a href="https://uelectronics.com/producto/unit-pulsar-esp32-c6/">
+    <img src="hardware/resources/IMG_5464.png" width="600px"><br/>
+    <em>Click here to purchase one from the UNIT Electronics shop</em>
+  </a>
+</p>
 *Click here to purchase one from the UNIT Electronics shop*</a>
 
 For more details, check out the product pages at:
