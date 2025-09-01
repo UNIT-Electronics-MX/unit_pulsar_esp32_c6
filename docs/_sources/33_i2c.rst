@@ -81,7 +81,7 @@ To scan for I2C devices connected to the bus, you can use the following code sni
 
          import machine
 
-         i2c = machine.I2C(0, scl=machine.Pin(23), sda=machine.Pin(22))
+         i2c = machine.I2C(0, scl=machine.Pin(7), sda=machine.Pin(6))
          devices = i2c.scan()
 
          for device in devices:
@@ -95,8 +95,8 @@ To scan for I2C devices connected to the bus, you can use the following code sni
 
         void setup() {
           // in setup
-          Wire.setSDA(22);
-          Wire.setSCL(23);
+          Wire.setSDA(6);
+          Wire.setSCL(7);
           Wire.begin();
           Serial.begin(9600); // Start serial communication at 9600 baud rate
           while (!Serial); // Wait for serial port to connect
@@ -211,7 +211,7 @@ Library Support
       import machine
       from ocks import SSD1306_I2C
 
-      i2c = machine.SoftI2C(freq=400000, timeout=50000, sda=machine.Pin(*), scl=machine.Pin(*))
+      i2c = machine.SoftI2C(freq=400000, timeout=50000, sda=machine.Pin(6), scl=machine.Pin(7))
 
       oled = SSD1306_I2C(128, 64, i2c)
 
@@ -262,8 +262,8 @@ Library Support
         Serial.begin(9600);
 
         // Initialize I2C
-        Wire.setSDA(4);
-        Wire.setSCL(5);
+        Wire.setSDA(6);
+        Wire.setSCL(7);
         Wire.begin();
         // Start the OLED display
         if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3C for 128x64
