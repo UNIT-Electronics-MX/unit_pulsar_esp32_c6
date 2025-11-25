@@ -12,7 +12,8 @@ from pathlib import Path
 from jinja2 import Template
 
 # Configuración de rutas
-BASE_DIR = Path(__file__).parent.parent.parent
+# El script está en .github/workflows/scripts/, necesitamos ir 3 niveles arriba para llegar al root
+BASE_DIR = Path(__file__).parent.parent.parent.parent
 HARDWARE_DIR = BASE_DIR / "hardware"
 DOCS_DIR = BASE_DIR / "docs"
 DOCS_HARDWARE_DIR = DOCS_DIR / "hardware"
