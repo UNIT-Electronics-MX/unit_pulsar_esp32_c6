@@ -53,6 +53,14 @@ jobs:
         git add docs/
         if [ -n "$(git status --porcelain)" ]; then
           git commit -m "Auto-update hardware documentation [skip ci]"
+          # Pull with rebase to handle concurrent changes from other workflows
+          git pull --rebase origin main || {
+            echo "Conflict detected, trying to resolve..."
+            git rebase --abort
+            git pull --no-rebase origin main
+            git add docs/
+            git commit -m "Merge: Auto-update hardware documentation [skip ci]" || true
+          }
           git push
         else
           echo "No changes to commit"
