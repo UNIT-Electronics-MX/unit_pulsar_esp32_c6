@@ -88,14 +88,36 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
+        
+        # Check if there are changes to commit
         git add docs/
-        git commit -m "Deploy full documentation and product brief [skip ci]" || echo "No changes"
-        # Pull with rebase to handle concurrent changes from other workflows
-        git pull --rebase origin main || {
-          echo "Conflict detected, trying to resolve..."
-          git rebase --abort
-          git pull --no-rebase origin main
-          git add docs/
-          git commit -m "Merge: Deploy full documentation [skip ci]" || true
-        }
-        git push origin main
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+          exit 0
+        fi
+        
+        # Commit changes
+        git commit -m "Deploy full documentation and product brief [skip ci]"
+        
+        # Try to push, if fails pull and retry
+        max_retries=3
+        for i in $(seq 1 $max_retries); do
+          if git push origin main; then
+            echo "Successfully pushed!"
+            exit 0
+          fi
+          
+          echo "Push failed, attempt $i of $max_retries"
+          echo "Pulling latest changes..."
+          
+          # Pull with merge strategy
+          git pull --no-rebase --no-edit origin main || {
+            echo "Pull failed, forcing merge with ours strategy for docs/"
+            git checkout --ours docs/
+            git add docs/
+            git commit -m "Merge: Resolve conflicts keeping our docs/ [skip ci]" || true
+          }
+        done
+        
+        echo "Failed to push after $max_retries attempts"
+        exit 1
