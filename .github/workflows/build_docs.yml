@@ -48,6 +48,14 @@ jobs:
       env:
         REPO_NAME: ${{ github.event.repository.name }}
       run: |
+        # Backup hardware documentation if it exists
+        if [ -d "docs/hardware" ]; then
+          echo "Backing up hardware documentation..."
+          mv docs/hardware /tmp/hardware_backup
+          mv docs/hardware.html /tmp/hardware.html.backup 2>/dev/null || true
+        fi
+        
+        # Clean docs/ directory (except hardware)
         rm -rf docs
         mkdir -p docs
 
@@ -61,6 +69,13 @@ jobs:
 
         # HTML generado por Sphinx
         cp -r software/sphinx/docs/* docs/
+
+        # Restore hardware documentation if it was backed up
+        if [ -d "/tmp/hardware_backup" ]; then
+          echo "Restoring hardware documentation..."
+          mv /tmp/hardware_backup docs/hardware
+          mv /tmp/hardware.html.backup docs/hardware.html 2>/dev/null || true
+        fi
 
         # Permitir archivos especiales en GitHub Pages
         touch docs/.nojekyll
