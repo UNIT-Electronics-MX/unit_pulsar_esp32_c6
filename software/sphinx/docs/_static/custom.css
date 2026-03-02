@@ -1,0 +1,9 @@
+
+
+.wy-side-nav-search {
+    background-color: #e7e7e7; /* Cambia #newColor por el código hexadecimal del color deseado */
+}
+
+.wy-side-nav-search .wy-dropdown>a, .wy-side-nav-search>a {
+    color: #1c1c1c; /* Azul */
+}
