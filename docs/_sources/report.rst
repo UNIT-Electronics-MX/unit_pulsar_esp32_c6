@@ -7,7 +7,11 @@ Steps to Create an Error Report
 -------------------------------
 
 1. **Access the GitHub Repository**  
-    Navigate to the `GitHub repository <https://github.com/UNIT-Electronics/UNIT_NANO_C6>`_ where the project is hosted.
+    Navigate to the |github_repo| where the project is hosted.
+
+    .. |github_repo| raw:: html
+
+       <a href="https://github.com/UNIT-Electronics/UNIT_NANO_C6" target="_blank">GitHub repository</a>
 
 2. **Open the Issues Tab**  
     Click on the "Issues" tab located in the repository menu.

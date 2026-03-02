@@ -40,7 +40,7 @@ Documentation for the UNIT PULSAR C6 Development Board. This board is a versatil
    22_adc
    33_i2c
    44_spi
-   55_WS2812
+   55_neop
    66_communication
    report
    

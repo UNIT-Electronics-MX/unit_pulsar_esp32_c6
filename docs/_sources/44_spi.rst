@@ -90,6 +90,33 @@ This table illustrates the connections between the SD card and the GPIO pins on 
    * - D1
      - 
      - 
+
+.. tabs::
+  .. tab:: MicroPython
+
+    The `sdcard.py` library for MicroPython on ESP32 & RP2040 is compatible with SD cards using SPI communication.
+
+    **Installation**
+
+    1. Open `Thonny <https://thonny.org/>`_.
+    2. Copy the library from |sdcard_link|.
+    3. Paste the library into a new file in Thonny and save it as `sdcard.py` on your device.
+
+    .. |sdcard_link| raw:: html
+
+       <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/blob/main/software/sdcard/sdcard.py" target="_blank">sdcard.py</a>
+
+  .. tab:: C++
+
+    The `SD.h` library for Arduino is compatible with SD cards using SPI communication.
+
+    **Installation**
+
+    1. Open the Arduino IDE.
+    2. Go to **Sketch** -> **Include Library** -> **Manage Libraries**.
+    3. Search for ``SD`` and click **Install**.
+    Alternatively, you can use the built-in SD library that comes with the Arduino IDE.
+
 .. tabs::
   .. tab:: MicroPython
 

@@ -178,7 +178,7 @@
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_neop.html">WS2812 Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
@@ -399,11 +399,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
             </nav>
         </div>
@@ -418,12 +413,12 @@ document.write(`
   <section id="installing-packages-micropython">
 <h1>Installing packages - Micropython<a class="headerlink" href="#installing-packages-micropython" title="Link to this heading">#</a></h1>
 <p>This section will guide you through the installation process of the required libraries using
-the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> package manager.</p>
+the <a href="https://pip.pypa.io/en/stable/" target="_blank">pip</a> package manager.</p>
 <section id="installation-guide-using-mip-library">
 <h2>Installation Guide Using MIP Library<a class="headerlink" href="#installation-guide-using-mip-library" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <cite>mip</cite> library is utilized to install other libraries on the NANOC6 board.</p>
+<p>The <cite>mip</cite> library is utilized to install other libraries on the <strong>PULSAR</strong> board.</p>
 </div>
 <section id="requirements">
 <h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h3>
@@ -435,7 +430,7 @@ the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> 
 </section>
 <section id="installation-instructions">
 <h3>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Link to this heading">#</a></h3>
-<p>Follow the steps below to install the <cite>max1704x.py</cite> library:</p>
+<p>Follow the steps below to install the <cite>max1704x.py, ssd1306.py, sdcard.py</cite> library:</p>
 </section>
 <section id="connect-to-wi-fi">
 <h3>Connect to Wi-Fi<a class="headerlink" href="#connect-to-wi-fi" title="Link to this heading">#</a></h3>
@@ -465,74 +460,18 @@ the <a class="reference external" href="https://pip.pypa.io/en/stable/">pip</a> 
 <span class="n">ip_address</span> <span class="o">=</span> <span class="n">connect_wifi</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">ip_address</span><span class="p">)</span>
 <span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/UNIT-Electronics/MAX1704X_lib/refs/heads/main/Software/MicroPython/example/max1704x.py&#39;</span><span class="p">)</span>
-<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Cesarbautista10/Libraries_compatibles_with_micropython/refs/heads/main/Libs/oled.py&#39;</span><span class="p">)</span>
-<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/Cesarbautista10/Libraries_compatibles_with_micropython/refs/heads/main/Libs/sdcard.py&#39;</span><span class="p">)</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/refs/heads/main/software/ssd1306/ssd1306.py&#39;</span><span class="p">)</span>
+<span class="n">mip</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/refs/heads/main/software/sdcard/sdcard.py&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="dualmcu-library">
-<h2>DualMCU Library<a class="headerlink" href="#dualmcu-library" title="Link to this heading">#</a></h2>
-<p>Firstly, you need install Thonny IDE. You can download it from the <a class="reference external" href="https://thonny.org/">Thonny website</a>.</p>
-<ol class="arabic simple">
-<li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
-<li><p>Navigate to <strong>Tools</strong> -&gt; <strong>Manage Packages</strong>.</p></li>
-<li><p>Search for <code class="docutils literal notranslate"><span class="pre">dualmcu</span></code> and click <strong>Install</strong>.</p></li>
-</ol>
 <figure class="align-center" id="id1">
-<span id="figure-dualmcu-libary"></span><a class="reference internal image-reference" href="_images/dualmcu_library.png"><img alt="DualMCU Library" src="_images/dualmcu_library.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="_images/libraries.png"><img alt="MIP Library Installation" src="_images/libraries.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">DualMCU Library</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">MIP Library Installation</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<ol class="arabic simple" start="4">
-<li><p>Successfully installed the library.</p></li>
-</ol>
-<figure class="align-center" id="id2">
-<span id="figure-dualmcu-libary-success"></span><a class="reference internal image-reference" href="_images/dualmcu_library_success.png"><img alt="DualMCU Library" src="_images/dualmcu_library_success.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">DualMCU Library Successfully Installed</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Alternatively, download the library from <a class="reference external" href="https://pypi.org/project/dualmcu/">dualmcu.py</a>.</p>
-<section id="usage">
-<h3>Usage<a class="headerlink" href="#usage" title="Link to this heading">#</a></h3>
-<p>The library provides a set of tools to help developers work with the DualMCU ONE board. The following are the main features of the library:</p>
-<ul class="simple">
-<li><p><strong>I2C Support</strong>: The library provides support for I2C communication protocol, making it easy to interface with a wide range of sensors and devices.</p></li>
-<li><p><strong>Arduino Shields Compatibility</strong>: The library is compatible with Arduino Shields, making it easy to use a wide range of shields and accessories with the DualMCU ONE board.</p></li>
-<li><p><strong>SDcard Support</strong>: The library provides support for SD cards, allowing developers to easily read and write data to SD cards.</p></li>
-</ul>
-<p>Examples of the library usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
-<span class="kn">from</span> <span class="nn">dualmcu</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">22</span><span class="p">),</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">21</span><span class="p">))</span>
-
-<span class="n">oled</span> <span class="o">=</span> <span class="n">SSD1306_I2C</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">i2c</span><span class="p">)</span>
-
-<span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;UNIT&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;ELECTRONICS&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-
-<span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
+<p>DualMCU Li</p>
 </section>
-</section>
-<section id="libraries-available">
-<h2>Libraries available<a class="headerlink" href="#libraries-available" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://pypi.org/project/dualmcu/">Dualmcu</a> : The library provides a set of tools to help developers work with the DualMCU ONE board. The library is actively maintained and updated to provide the best experience for developers working with the DualMCU ONE board. For more information and updates, visit the <cite>dualmcu GitHub repository`</cite></p></li>
-<li><p><a class="reference external" href="https://pypi.org/project/ocks/">Ocks</a> : The library provides support for I2C communication protocol.</p></li>
-<li><p><a class="reference external" href="https://pypi.org/project/sdcard-lib/">SDcard-lib</a> : The library provides support for SD cards, allowing developers to easily read and write data to SD cards; all rights remain with the original author.</p></li>
-</ul>
-<p>The library is actively maintained and updated to provide the best experience for developers working with
-the DualMCU ONE board.</p>
 </section>
 </section>
 
@@ -587,11 +526,6 @@ the DualMCU ONE board.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-to-wi-fi">Connect to Wi-Fi</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dualmcu-library">DualMCU Library</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-available">Libraries available</a></li>
 </ul>
   </nav></div>
 
