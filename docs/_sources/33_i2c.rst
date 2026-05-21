@@ -3,14 +3,7 @@ I2C (Inter-Integrated Circuit)
 
 Discover the I2C communication protocol and learn how to communicate with I2C devices using the PULSAR  C6 board. This section will cover I2C bus setup and communication with I2C peripherals.
 
-.. .. _figure_i2c:
 
-.. .. figure:: /_static/dualmcu_one3.png
-..    :align: center
-..    :alt: I2C
-..    :width: 90%
-
-..    I2C Pins
 
 I2C Overview
 ------------
@@ -98,7 +91,7 @@ To scan for I2C devices connected to the bus, you can use the following code sni
           Wire.setSDA(6);
           Wire.setSCL(7);
           Wire.begin();
-          Serial.begin(9600); // Start serial communication at 9600 baud rate
+          Serial.begin(115200); // Start serial communication at 115200 baud rate
           while (!Serial); // Wait for serial port to connect
           Serial.println("\nI2C Scanner");
         }
@@ -178,15 +171,22 @@ Library Support
 
   .. tab:: MicroPython
 
-    The `ocks.py` library for MicroPython on ESP32 & RP2040 is compatible with the SSD1306 display controller.
+    The `ssd1306.py` library for MicroPython on ESP32 & RP2040 is compatible with the SSD1306 display controller.
 
     **Installation**
 
-    1. Open `Thonny <https://thonny.org/>`_.
-    2. Navigate to **Tools** -> **Manage Packages**.
-    3. Search for ``ocks`` and click **Install**.
+    1. Open |thonny_link_i2c|.
+    2. Copy the library from |ssd1306_link|.
+    3. Paste the library into a new file in Thonny and save it as `ssd1306.py` on your device.
 
-    Alternatively, download the library from `ocks.py <https://pypi.org/project/ocks/>`_.
+    .. |thonny_link_i2c| raw:: html
+
+       <a href="https://thonny.org/" target="_blank">Thonny</a>
+
+    .. |ssd1306_link| raw:: html
+
+       <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/blob/main/software/ssd1306/ssd1306.py" target="_blank">ssd1306.py</a>
+
 
     **Microcontroller Configuration**
 
@@ -208,27 +208,27 @@ Library Support
 
     .. code-block:: python  
 
-      import machine
-      from ocks import SSD1306_I2C
+        import machine
+        from ssd1306 import SSD1306_I2C
 
-      i2c = machine.SoftI2C(freq=400000, timeout=50000, sda=machine.Pin(6), scl=machine.Pin(7))
+        I2C_SDA_PIN = 6
+        I2C_SCL_PIN = 7
 
-      oled = SSD1306_I2C(128, 64, i2c)
+        i2c = machine.SoftI2C(sda=machine.Pin(I2C_SDA_PIN), scl=machine.Pin(I2C_SCL_PIN))
 
-      # Fill the screen with white and display
-      oled.fill(1)
-      oled.show()
+        oled = SSD1306_I2C(128, 32, i2c)
 
-      # Clear the screen (fill with black)
-      oled.fill(0)
-      oled.show()
+        oled.fill(1)
+        oled.show()
 
-      # Display text
-      oled.text('UNIT', 50, 10)
-      oled.text('ELECTRONICS', 25, 20)
-      oled.show()
+        oled.fill(0)
+        oled.show()
+        oled.text('UNIT', 50, 10)
+        oled.text('ELECTRONICS', 25, 20)
 
-    Replace ``sda=machine.Pin(*)`` and ``scl=machine.Pin(*)`` with the appropriate GPIO pins for your setup.
+        oled.show()
+
+    Replace ``I2C_SDA_PIN`` and ``I2C_SCL_PIN`` with the appropriate GPIO pins for your setup.
 
   .. tab:: C++
 
@@ -358,3 +358,54 @@ Library Support
          ssd1306_draw_text(I2C_MASTER_NUM, 2, "I2C Scan + OLED");
          ssd1306_draw_text(I2C_MASTER_NUM, 4, "Monosaurio");
       }
+
+
+Application Example
+-------------------
+
+Emotionally – Reacting Face with MicroPython on Pulsar C6
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bring your board to life with emotions! This project demonstrates how to use the SSD1306 OLED display and MPU6050 IMU sensor with the PULSAR C6 board to create an interactive, emotionally-reacting face.
+
+**Project Overview**
+
+*Emotionally* is a cute and expressive project that reacts to how you move it: shake it hard and it gets angry, leave it alone and it gets sleepy. It's the perfect example of using sensors and displays to give character to embedded systems.
+
+**Hardware Components**
+
+- PULSAR C6 development board
+- SSD1306 OLED display (128x64)
+- MPU6050 IMU sensor
+- I2C Qwiic connector
+
+**Emotions Logic**
+
+- **Happy**: Gentle movement
+- **Surprised**: Moderate shaking
+- **Angry**: Harsh motion
+- **Sleepy**: Still (with ZzZ animation)
+
+**Software Setup**
+
+1. Flash MicroPython to the Pulsar C6
+2. Upload ``main.py`` and ``mpu6050.py`` using mpremote or Thonny
+3. Power on the board — the face will appear on the screen
+4. Move the board and watch the expression change in real-time!
+
+This project is ideal for STEM education, IoT toys, wearables, and user-interface experiments.
+
+.. only:: html
+
+   .. figure:: https://raw.githubusercontent.com/UNIT-Electronics-MX/unit_emotionally_pulsar_c6_mp/refs/heads/main/hardware/resources/14.gif
+      :align: center
+      :alt: Emotionally Demo
+      :width: 60%
+
+      Emotionally – Reacting Face Demo
+
+For complete code, schematics, and detailed instructions, visit the |emotionally_project|.
+
+.. |emotionally_project| raw:: html
+
+   <a href="https://www.hackster.io/mrcronos/emotionally-reacting-face-with-micropython-on-pulsar-c6-aa4a40" target="_blank">Hackster.io project page</a>

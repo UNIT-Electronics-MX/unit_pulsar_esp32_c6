@@ -171,7 +171,11 @@ First Steps with ESP-IDF
     The ESP-IDF repository includes numerous example projects demonstrating various features. These can be found in the `examples` directory. Copy and modify any example project as needed.
 
 11. **Refer to ESP-IDF Documentation**  
-    For comprehensive information, including API references and guides, visit the official ESP-IDF documentation: `ESP-IDF Documentation <https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html>`__.
+    For comprehensive information, including API references and guides, visit the official ESP-IDF documentation: |esp_idf_docs|.
+
+    .. |esp_idf_docs| raw:: html
+
+       <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html" target="_blank">ESP-IDF Documentation</a>
 
 12. **Join the ESP-IDF Community**  
     For assistance or discussions, join the ESP-IDF community on GitHub or the Espressif Community Forum. The community is active and provides support for various ESP32 development topics.

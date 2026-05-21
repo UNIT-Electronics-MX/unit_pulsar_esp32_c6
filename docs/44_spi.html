@@ -56,7 +56,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '44_spi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="WS2812 Control" href="55_WS2812.html" />
+    <link rel="next" title="WS2812 Control" href="55_neop.html" />
     <link rel="prev" title="I2C (Inter-Integrated Circuit)" href="33_i2c.html" />
     <link rel="icon" href="_static/3.png" type="image/x-icon">
     <link rel="shortcut icon" href="_static/3.png" type="image/x-icon">
@@ -179,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="33_i2c.html">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">SPI (Serial Peripheral Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_neop.html">WS2812 Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
@@ -488,7 +488,24 @@ Format the Micro SD card to FAT32 before using it with the ESP32-C6.</p>
 </table>
 </div>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><p>The <cite>sdcard.py</cite> library for MicroPython on ESP32 &amp; RP2040 is compatible with SD cards using SPI communication.</p>
+<p><strong>Installation</strong></p>
+<ol class="arabic simple">
+<li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
+<li><p>Copy the library from <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/blob/main/software/sdcard/sdcard.py" target="_blank">sdcard.py</a>.</p></li>
+<li><p>Paste the library into a new file in Thonny and save it as <cite>sdcard.py</cite> on your device.</p></li>
+</ol>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><p>The <cite>SD.h</cite> library for Arduino is compatible with SD cards using SPI communication.</p>
+<p><strong>Installation</strong></p>
+<ol class="arabic simple">
+<li><p>Open the Arduino IDE.</p></li>
+<li><p>Go to <strong>Sketch</strong> -&gt; <strong>Include Library</strong> -&gt; <strong>Manage Libraries</strong>.</p></li>
+</ol>
+<p>3. Search for <code class="docutils literal notranslate"><span class="pre">SD</span></code> and click <strong>Install</strong>.
+Alternatively, you can use the built-in SD library that comes with the Arduino IDE.</p>
+</div></div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">sdcard</span> <span class="kn">import</span> <span class="n">SDCard</span>
 
@@ -515,7 +532,7 @@ Format the Micro SD card to FAT32 before using it with the ESP32-C6.</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s2">&quot;/sd&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SD.h&gt;</span>
 
 <span class="c1">// Pines SPI (ajusta según tu placa si es necesario)</span>
@@ -608,7 +625,7 @@ Format the Micro SD card to FAT32 before using it with the ESP32-C6.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+</div><div aria-labelledby="tab-1-1-2" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-2" name="1-2" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/stat.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_log.h&quot;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_vfs_fat.h&quot;</span>
@@ -723,7 +740,7 @@ Format the Micro SD card to FAT32 before using it with the ESP32-C6.</p>
       </div>
     </a>
     <a class="right-next"
-       href="55_WS2812.html"
+       href="55_neop.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>

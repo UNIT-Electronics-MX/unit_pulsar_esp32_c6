@@ -12,7 +12,11 @@ Before you start, it is recommended to perform the following setup:
 Install MicroPython
 ^^^^^^^^^^^^^^^^^^^^
 
-This will allow you to download the firmware to the DualMCU using the `Thonny IDE <https://thonny.org/>`_.
+This will allow you to download the firmware to the DualMCU using the |thonny_ide|.
+
+.. |thonny_ide| raw:: html
+
+   <a href="https://thonny.org/" target="_blank">Thonny IDE</a>
 
 1. Go to **"Run"** -> **"Configure interpreter"** to complete the setup.
 
@@ -142,12 +146,24 @@ Arduino IDE Installation environment
 
     .. tab:: Uelectronics-RP2040-Arduino-Package
 
-        Uelectronics Arduino core is a ported version of the `Raspberry Pi Pico Arduino Core <https://github.com/earlephilhower/arduino-pico>`_ based on the great work of earlephilhower Earle F. Philhower, III. This port of the RP2040 uses the Raspberry Pi Pico SDK and a custom GCC 10.3/Newlib 4.0 toolchain, the same as earlephilhower `version 2.6.4 <https://github.com/earlephilhower/arduino-pico/releases/tag/2.6.4>`_.
+        Uelectronics Arduino core is a ported version of the |rpi_pico_core| based on the great work of earlephilhower Earle F. Philhower, III. This port of the RP2040 uses the Raspberry Pi Pico SDK and a custom GCC 10.3/Newlib 4.0 toolchain, the same as earlephilhower |version_264|.
+
+        .. |rpi_pico_core| raw:: html
+
+           <a href="https://github.com/earlephilhower/arduino-pico" target="_blank">Raspberry Pi Pico Arduino Core</a>
+
+        .. |version_264| raw:: html
+
+           <a href="https://github.com/earlephilhower/arduino-pico/releases/tag/2.6.4" target="_blank">version 2.6.4</a>
 
         Documentation
         -------------
 
-        See `https://github.com/UNIT-Electronics/DualMCU <https://github.com/UNIT-Electronics/DualMCU>`_ along with the examples for more detailed usage information.
+        See |dualmcu_github| along with the examples for more detailed usage information.
+
+        .. |dualmcu_github| raw:: html
+
+           <a href="https://github.com/UNIT-Electronics/DualMCU" target="_blank">https://github.com/UNIT-Electronics/DualMCU</a>
 
         Supported Boards
         ----------------
@@ -216,8 +232,12 @@ Arduino IDE Installation environment
         
         Arduino allows installation of third-party platform packages using Boards Manager. 
 
-        - Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the `Arduino website <http://www.arduino.cc/en/main/software>`_.
+        - Install the current upstream Arduino IDE at the 1.8 level or later. The current version is at the |arduino_website|.
         - Start Arduino and open Preferences window.
+
+        .. |arduino_website| raw:: html
+
+           <a href="http://www.arduino.cc/en/main/software" target="_blank">Arduino website</a>
         - Enter one of the release links above into *Additional Board Manager URLs* field. You can add multiple URLs, separating them with commas.
         - Open Boards Manager from Tools > Board menu and install *esp32* platform (and don't forget to select your ESP32 board from Tools > Board menu after installation).
 

@@ -179,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="22_adc.html">Analog to Digital Conversion</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">I2C (Inter-Integrated Circuit)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="44_spi.html">SPI (Serial Peripheral Interface)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="55_WS2812.html">WS2812 Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="55_neop.html">WS2812 Control</a></li>
 <li class="toctree-l1"><a class="reference internal" href="66_communication.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="report.html">How to Generate an Error Report</a></li>
 </ul>
@@ -402,6 +402,10 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-example">Application Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emotionally-reacting-face-with-micropython-on-pulsar-c6">Emotionally – Reacting Face with MicroPython on Pulsar C6</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -451,7 +455,7 @@ document.write(`
 <figure class="align-center" id="id2">
 <span id="figure-i2c-lp"></span><a class="reference internal image-reference" href="_images/jst_lp.png"><img alt="I2C" src="_images/jst_lp.png" style="width: 20%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">I2C Pins</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">I2C Pins</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="pst-scrollable-table-container"><table class="table table-center" id="id3">
@@ -478,7 +482,7 @@ document.write(`
 <figure class="align-center" id="id4">
 <a class="reference internal image-reference" href="_images/c6_oled.png"><img alt="I2C" src="_images/c6_oled.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">I2C Pins</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">I2C Pins</span><a class="headerlink" href="#id4" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -502,7 +506,7 @@ document.write(`
 <span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSDA</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">setSCL</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
 <span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"> </span><span class="c1">// Start serial communication at 9600 baud rate</span>
+<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// Start serial communication at 115200 baud rate</span>
 <span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Serial</span><span class="p">);</span><span class="w"> </span><span class="c1">// Wait for serial port to connect</span>
 <span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">I2C Scanner&quot;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -552,7 +556,7 @@ document.write(`
 <figure class="align-center" id="id5">
 <span id="figura-ssd1306-display"></span><a class="reference internal image-reference" href="_images/oled.jpg"><img alt="ssd1306 display" src="_images/oled.jpg" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">SSD1306 Display</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">SSD1306 Display</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The display 128x64 pixel monochrome OLED display equipped with an SSD1306 controller is connected using a JST 1.25mm 4-pin connector. The following table provides the pinout details for the display connection.</p>
@@ -586,14 +590,13 @@ document.write(`
 <section id="library-support">
 <h3>Library Support<a class="headerlink" href="#library-support" title="Link to this heading">#</a></h3>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>The <cite>ocks.py</cite> library for MicroPython on ESP32 &amp; RP2040 is compatible with the SSD1306 display controller.</p>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">MicroPython</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button><button aria-controls="panel-1-1-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-2" name="1-2" role="tab" tabindex="-1">esp-idf</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><p>The <cite>ssd1306.py</cite> library for MicroPython on ESP32 &amp; RP2040 is compatible with the SSD1306 display controller.</p>
 <p><strong>Installation</strong></p>
 <ol class="arabic simple">
-<li><p>Open <a class="reference external" href="https://thonny.org/">Thonny</a>.</p></li>
-<li><p>Navigate to <strong>Tools</strong> -&gt; <strong>Manage Packages</strong>.</p></li>
-<li><p>Search for <code class="docutils literal notranslate"><span class="pre">ocks</span></code> and click <strong>Install</strong>.</p></li>
+<li><p>Open <a href="https://thonny.org/" target="_blank">Thonny</a>.</p></li>
+<li><p>Copy the library from <a href="https://github.com/UNIT-Electronics-MX/unit_devlab_micropython_libraries/blob/main/software/ssd1306/ssd1306.py" target="_blank">ssd1306.py</a>.</p></li>
+<li><p>Paste the library into a new file in Thonny and save it as <cite>ssd1306.py</cite> on your device.</p></li>
 </ol>
-<p>Alternatively, download the library from <a class="reference external" href="https://pypi.org/project/ocks/">ocks.py</a>.</p>
 <p><strong>Microcontroller Configuration</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">scl</span><span class="p">,</span> <span class="n">sda</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50000</span><span class="p">)</span>
 </pre></div>
@@ -609,27 +612,27 @@ document.write(`
 </div>
 <p><strong>Example Code</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">machine</span>
-<span class="kn">from</span> <span class="nn">ocks</span> <span class="kn">import</span> <span class="n">SSD1306_I2C</span>
+<span class="kn">from</span> <span class="nn">ssd1306</span> <span class="kn">import</span> <span class="n">SSD1306_I2C</span>
 
-<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">400000</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">50000</span><span class="p">,</span> <span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">I2C_SDA_PIN</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">I2C_SCL_PIN</span> <span class="o">=</span> <span class="mi">7</span>
 
-<span class="n">oled</span> <span class="o">=</span> <span class="n">SSD1306_I2C</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">i2c</span><span class="p">)</span>
+<span class="n">i2c</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">SoftI2C</span><span class="p">(</span><span class="n">sda</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="n">I2C_SDA_PIN</span><span class="p">),</span> <span class="n">scl</span><span class="o">=</span><span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="n">I2C_SCL_PIN</span><span class="p">))</span>
 
-<span class="c1"># Fill the screen with white and display</span>
+<span class="n">oled</span> <span class="o">=</span> <span class="n">SSD1306_I2C</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">i2c</span><span class="p">)</span>
+
 <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="c1"># Clear the screen (fill with black)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Display text</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;UNIT&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">oled</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s1">&#39;ELECTRONICS&#39;</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
 <span class="n">oled</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Replace <code class="docutils literal notranslate"><span class="pre">sda=machine.Pin(*)</span></code> and <code class="docutils literal notranslate"><span class="pre">scl=machine.Pin(*)</span></code> with the appropriate GPIO pins for your setup.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">I2C_SDA_PIN</span></code> and <code class="docutils literal notranslate"><span class="pre">I2C_SCL_PIN</span></code> with the appropriate GPIO pins for your setup.</p>
 </div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><p>The <cite>Adafruit_SSD1306</cite> library for Arduino is compatible with the SSD1306 display controller.</p>
 <p><strong>Installation</strong></p>
 <ol class="arabic simple">
@@ -754,6 +757,44 @@ document.write(`
 </div></div>
 </section>
 </section>
+<section id="application-example">
+<h2>Application Example<a class="headerlink" href="#application-example" title="Link to this heading">#</a></h2>
+<section id="emotionally-reacting-face-with-micropython-on-pulsar-c6">
+<h3>Emotionally – Reacting Face with MicroPython on Pulsar C6<a class="headerlink" href="#emotionally-reacting-face-with-micropython-on-pulsar-c6" title="Link to this heading">#</a></h3>
+<p>Bring your board to life with emotions! This project demonstrates how to use the SSD1306 OLED display and MPU6050 IMU sensor with the PULSAR C6 board to create an interactive, emotionally-reacting face.</p>
+<p><strong>Project Overview</strong></p>
+<p><em>Emotionally</em> is a cute and expressive project that reacts to how you move it: shake it hard and it gets angry, leave it alone and it gets sleepy. It’s the perfect example of using sensors and displays to give character to embedded systems.</p>
+<p><strong>Hardware Components</strong></p>
+<ul class="simple">
+<li><p>PULSAR C6 development board</p></li>
+<li><p>SSD1306 OLED display (128x64)</p></li>
+<li><p>MPU6050 IMU sensor</p></li>
+<li><p>I2C Qwiic connector</p></li>
+</ul>
+<p><strong>Emotions Logic</strong></p>
+<ul class="simple">
+<li><p><strong>Happy</strong>: Gentle movement</p></li>
+<li><p><strong>Surprised</strong>: Moderate shaking</p></li>
+<li><p><strong>Angry</strong>: Harsh motion</p></li>
+<li><p><strong>Sleepy</strong>: Still (with ZzZ animation)</p></li>
+</ul>
+<p><strong>Software Setup</strong></p>
+<ol class="arabic simple">
+<li><p>Flash MicroPython to the Pulsar C6</p></li>
+<li><p>Upload <code class="docutils literal notranslate"><span class="pre">main.py</span></code> and <code class="docutils literal notranslate"><span class="pre">mpu6050.py</span></code> using mpremote or Thonny</p></li>
+<li><p>Power on the board — the face will appear on the screen</p></li>
+<li><p>Move the board and watch the expression change in real-time!</p></li>
+</ol>
+<p>This project is ideal for STEM education, IoT toys, wearables, and user-interface experiments.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/UNIT-Electronics-MX/unit_emotionally_pulsar_c6_mp/refs/heads/main/hardware/resources/14.gif"><img alt="Emotionally Demo" src="https://raw.githubusercontent.com/UNIT-Electronics-MX/unit_emotionally_pulsar_c6_mp/refs/heads/main/hardware/resources/14.gif" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Emotionally – Reacting Face Demo</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For complete code, schematics, and detailed instructions, visit the <a href="https://www.hackster.io/mrcronos/emotionally-reacting-face-with-micropython-on-pulsar-c6-aa4a40" target="_blank">Hackster.io project page</a>.</p>
+</section>
+</section>
 </section>
 
 
@@ -807,6 +848,10 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scanning-for-i2c-devices">Scanning for I2C Devices</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssd1306-display">SSD1306 Display</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library-support">Library Support</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-example">Application Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#emotionally-reacting-face-with-micropython-on-pulsar-c6">Emotionally – Reacting Face with MicroPython on Pulsar C6</a></li>
 </ul>
 </li>
 </ul>

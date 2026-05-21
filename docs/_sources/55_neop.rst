@@ -118,5 +118,9 @@ Below is an example that demonstrates how to control WS1280 LED strips using the
 
 ..  tip::
   
-    for more information on the NeoPixel library, refer to the `NeoPixel Library Documentation <https://github.com/lvidarte/esp8266/wiki/MicroPython:-NeoPixels>`_.
+    for more information on the NeoPixel library, refer to the |neopixel_docs|.
+
+    .. |neopixel_docs| raw:: html
+
+       <a href="https://github.com/lvidarte/esp8266/wiki/MicroPython:-NeoPixels" target="_blank">NeoPixel Library Documentation</a>
 
